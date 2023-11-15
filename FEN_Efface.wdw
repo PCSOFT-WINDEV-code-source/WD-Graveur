@@ -1,0 +1,358 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Efface
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : Fenêtre pour effeacement de disque
+ subtype : 0
+window :
+ name : FEN_Efface
+ identifier : 0x2418534726ebdb1d
+ internal_properties : CAAAAAgAAAB5OqV529EmDuWczYqPHzW0wlMPMpk1iZNFxqvy6CWuq6QO2PgXS28O6Rb3iz0uQbmAFLosF0JaJ2tkg11SLykJbJPpeV94Zdz2zMoHps1IiqykOhF8IRA++cRj1x7QnfYxEIzgp9JzVGTJQLPs37sSzCwj5vDgFJxT+wUnJjobCv/jZDyd8qqkEbag/cgbiK/vZ+ovHbJbPP7qz40YjX8RMoiyqNCzPdxlNu/ufpAM8NzEcbuvmZ+RRu6icwph4QZasktsAQOZCjQkSGfXSvODfsbsmmK/Na7MSTigJmlFQ3c+FblnWzNrJHuunH5bOxTMoGj9IV2by7ub/Ryx5GMAS4fp1zS0hsUOss8APqHDUEJP2bi/ICF+JPEQt5Ek6SDLDhY1KzBxbEwWPeufkbNSMkfXpN/RILpUz8TbyFmO2B1//+Kj5hq4TOZUlhMxyYd2NYt6EsmZRxb+r25H3Ii7CwdP7BQfjyHpZr7R84PWGovoj48vHMOU0NFD9fnatE9eyHYnmRK9fcDszLwKpuKG9sYZOyS29Orj9hIQn+4GwjlnouS5gY7eIkWMGiKVgoj3KY9Jy/wfty21ZAjJbl94SSdpE9Ri88MhqdifEZ4B1BsSQHQwhSC2sd2DqQGU2/BX+NjHy1Jdht6V0BK/33QBwBHfjBQ+yvznECtFr6QctDju1olOhXPftYUIpw+gH7Zm27tEVQbHL87LL9c/oV9b9PcDQ86dsia1oK1JHXqPgV526f2iD7ki38a1bT81CEw19dTAYe0yvNn82JO1jJhTY2KrhubivK4KEKjEzInVMgvGHI7f918/VoGitMRyrA0oBiTwbP38030ga3nRpA8pZFzHQDECKyaGjG5YZK8yhIZkZl2Q3BlVCpDv8hVIND+/F1NRjyWPuuS3xlRNd1AGru0163fjhmVoOy5PIUAXuXJ1kyHjTE2uelLSWEUsWHKpsuWm4K9Ge+Blaut3heETfMHjyxBmCmgQ4Rls1L5Hys3TtI2m/Q==
+ properties :
+  x : 5
+  y : 5
+  width : 426
+  height : 384
+  widthClient : 424
+  heightClient : 352
+ controls :
+  -
+    name : BTN_Effacer
+    identifier : 0x241853a92c5b5ab8
+    internal_properties : CAAAAAgAAACGa9p+05x3xX32q8Y5e69SDfau0se6+S5FYpYkrYs0XQKgVX8OcAHNzC/dYAUwdAjf2qtGfdE9NjIS2Sz7acWM4fSlyTJZk96kEN2VgA+6m3rY4EzSt2GC2RPZ8V8vVvFVaTyfg1Oa+BSVdzN/wub+PW2jlyXHgMWJsweAjkCuwCFhJFI16WTtbyNUIqaCBxDxQxICYB2IskOW39Ohgt9trEtF18FL7xiIN77NSY9kUVJ5F4bLEcUghIhnLyekup+NWxtqvgeaSDdCDFMy2Q4OHsY4SGqeSGFJJcv6e3TMR/nIgKtz+fC8hYxdAiNViB4fwQIoooYvdpjtNWjs5X4KwcXL5YYMMCYaUHH3JEzktKTSPX4yEqbHrPTrvTnXcTD0kHaKx917zV8KNRPoItgNXmRircRffrBCqtmn/0EIkZio/k5Y6w8ypdy8uwx2ZLtwXkWBpB1qhuiE3Nx74bPid8pGO4GCARRbar7iACGH5SOKEUDJobRSgU1cYpfGAXXPmq2KPIkYrml1f4zomvVYoUnKuUgK0RqapWj5Zlm7uX1LZZXFV9g5g2qFsw7NRyhDar7UcSI6bq6qKYHwl7iR6APFCsDJ6LY+kqgGs9sXLvvwVLDuNTDHEGVmTpi4XqwjcwvLz75wDoz2NkxJOiZZUmLHIWXeC//nSkkPlDl5A+2ZgeE5cLD8RGDe9LWU2d9MH5I1ldyf/1pdhi4TCDyPnVIRtSu+/bCsJqlJMFDsUBfATdkUvADgKLs7mZIGdM1ySeHK9Qr6HROqtq7f6ZabREwc7pQg/9DqceCOsUIRf56l4OUuv2cjgTP7NX7m0BOsiIDpAJ82kNsRjGD1kg==
+    properties :
+     x : 154
+     y : 294
+     width : 50
+     height : 52
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAAAjQdhuZa8VFaJ6n5oeZP1x9dhU2KdAHDZIGQ5trazjjXFHCLYp5nDDtZbkQIVLGWo5vozTOg2AvHlkssz6JjgHk5SMxWyjmmsgypaffz27jhHJ8pKcbl54SJRWKk0nldQP8PNY9C6IGiLTw4LZ+FV6rEO7iTVeesnYYljBvd5auJIh4eP5m2760YiRk2EotVa2sg==
+        code : |1+
+         nEject est un entier
+         
+         si INT_Eject ALORS
+         	nEject = graveurEjecteAuto
+         sinon
+         	nEject = graveurSansEjecter
+         FIN
+         LIB_EffaceEnCours..Visible  = Vrai
+         IMG_GRAVEUR..Visible	    = vrai
+         BTN_Effacer..etat 			= grisé
+         INT_Eject..Etat 			= Grisé
+         COMBO_ModeEffacement..etat  = grisé
+         
+         si 	COMBO_ModeEffacement[ListeSelect(COMBO_ModeEffacement)] = graveurEffacementRapide alors
+         	// effacement rapide
+         	si pas GraveurEfface(graveurEffacementRapide+nEject,ProcEffacementCD) ALORS
+         		// Affichage de l'erreur 
+         		Erreur("Echec durant l'effacement du CD/DVD réinscriptible.",ErreurInfo()) 
+         		ferme("",faux)
+         	FIN
+         sinon
+         	// effecement complet
+         	si pas GraveurEfface(graveurEffacementcomplet+nEject,ProcEffacementCD) ALORS
+         		// Affichage de l'erreur 
+         		Erreur("Echec durant l'effacement du CD/DVD réinscriptible.",ErreurInfo()) 
+         		ferme("",faux)
+         	FIN
+         FIN
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Annuler
+    identifier : 0x241853ba2c5e9f14
+    internal_properties : CAAAAAgAAABB/3zZV5thh+ku5o0d9L9dUUOMhXjwmG4pYW9cQ8WMoPmWCoMVIWw+uwMBIEuvkpD13N4khaTbAehkh09xJibSKK73pFbsU71Z79Nblq71WusRIGLQQ7D9RxMRCt7JctgX2QxZ5uvbm2gVDTwaetqUgEhMD5PCxampwXL6GydO1p+474t21aCNA9L6KBd8T7YSzuuQ0rxy6o/eFpKbNBitvwajH3WqghWVIh0vFMEVz4PEeDquA6o68X9i8c4cmm7J6+g1nwtEdYU/duGB2XA/rjRpMQviLRRJq8L1isaAmeHs0kfVTB71L3tULH/zTTd7e0bnB0OXe+DzoURLyjqHYymFFarD9wH/XZyRG/okkLRuyMcygkcabM6uKx2n04D9bv4ve+egwpJGd8wwTlxhDKFkFWYGdUJSrADEiF37kESfneS70eT3Gp5VyejEDW2juGY1bYMic0ZM/+4jhG2bn+8p9vltjSCU3ty773tYj5YSVu6W/Zuu77YK7cCyT8rLqe5C8/kXZzF/V1aSbJKdHxtHTS7ZBcMyoPeEraBFfHQBxzKVDVvG2ZPyAyOyO9YZClp5yenVm1b3P0NkB+He4+DnWIc88c8byd61eXMOorp73t3VdnLMcYO5vVQ0GF+PGMGA80Dzt8guyhOSQy91ReMmw+Fwg30eBp+ng6pFSvEext7XWeYENfW27vkCbOESMQ0Bt9cr21vxBzjHjZxY+f5jV2ziFSC1pCQR6I/+KRkH4X/ZaGrgGD5Az5gaOArN6KFW/aZSsqdW5NWQ5pqpljIWJ/I9+KWfPIoN33IICf36wRNOYI6scUbokQjYae5VARprHyQTZSz2gpTKwFAerW6i
+    properties :
+     x : 222
+     y : 298
+     width : 48
+     height : 48
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         SI OuiNon(non,"Voulez vous vraiment abandonner l'effacement ?") ALORS
+         	// appeler la méthode d'annulation de la gravure de IMAPI
+         	GraveurAnnuleGravure()	
+         	ferme(FEN_Efface)
+         FIN
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : COMBO_ModeEffacement
+    identifier : 0x2418547d3bee968a
+    internal_properties : CAAAAAgAAADtHwl/DrR/n7H7NaemVuimUXFSA9C/TW4isIwnQBaUtbj7lM0thkkpmH3C7ua0XxU+AVkAM7e1r7W7K+zsAh6MYxXX6EJoCmqRJTt5U1rd3zqTRP8KoNEHUM3pwoHIu7k06L47tepw4UQCcpzw5VDTOpTk9M2Hfqg4UYMgAYtm80aT5FzXLf+9hxlHKLva8GRd52iPDXVaUfNO80TKu3ip+Iypp4s3Y4bRyAUeuz0fLWYseem8/vpQLXm+a7X6CbLG18fLX+mFZEsNvdy6TJJw1tHEIe17Du2vmtFG0nzj9mSNGgFJYDZHxpmgmVfWpUW2SHGMDh7gqlfC8jXNXxoPIV8KHi0d5UkgmOGlfCapkOjtyOYrpaUGGDk2dgHsHSzZ28JFqoki600V4z9v5kJ/teaECLTnWF1Sgzo8MN8OTbvDbTPMRzRPWYjIIXFgMw9U6YJPMuBdbKpYKUM2FXZf94B4sXKvbuHIEwsnRhFzW8godih849khfuBUa4SKS5mQoq/xipbvCPVl6dPl+QWNrMJMbA7fin2vBNf547p1QEVA53KoE0kRq8U3ome9Qg2iPA19RRlJy328NHCdmWMY/ls3fsfiXzHgJ2Z3WsMTu6gvvpRjfYLp7d61kRwsXR82gr1qyz4eaql7pPdNDbZjn/qfbdwoN8aWkbgph+tR1ysw5K6oGkZmQH2BRFXYdP3QRfZhXdFG27DWlpfTddSHZrlKXsXa/GhYAZiZIq11xZ4Myo7tODSUT+bJYE/Mh87nYRHMdIFHw1z80CpysREb90dubTJNQm6S/PgiWfPg2Znup5u4hazKRI1Jhw83p+MxczmugB8GahRaS4ENfI7uQ0TAwAQfWAEWnQAR+p8vLmZ/1gPhHS65Ycy3fxdY5Ev/B6Cy+y05EMLzsJ3IfJc7OfJEoSICk0du46ORkRjGiP3LJrLC9bHtVwHbAWUtlGHnrdfl8jpZ0DCimm7bRUDN7541YqHvShESUpj5+gma7qQw0M4p6fFCJW0uq1OauC4dPvkWDJJ+i2eFyE3ZmtAn6BkcTEIdABFX2wyv8PYNnOYCGq3AJSksXNGJTZlgUUxnKWGuFOMxDWraxVOsqJz1PMJJa5RfSsfuLfWMO6K25X2qaltwWwCXEbmLsMePkFsFOig2yLa/eP2ZdOGWNg51eU7C0DdwWKnb6LYnG5qvt+3k1dQE0u+lusygHX6Oo4KgmoMMFs0LTvHEVzi56TXNwQK39wxy71fYy47zUgMGpfnKWD7kzpf6xH5OD3Or7iD9II64p5ohqoAj+0AcBP7yrfXJxLZDr4VLDy77VXCwR64kVZuHknaPw0P2AJV9sC3tXUKDnwASm3bKOueJhPlD7YCZ+D9ttPnvBOUacyH/pZkfKZiVSyh7yk5wnlZiY/0tIUVLf3pEBcWfWvbUgjEDQj7AcBcEaLTwKHRKH8OP3iMmvG6w4iPGlgF8zSPlEyjecjoVM5LfpENwShqpR7nTc3R8Vm2qo8tb1/SWZDYilPh8
+    properties :
+     x : 10
+     y : 10
+     width : 404
+     height : 38
+    dropdown :
+     internal_properties : CAAAAAgAAABGcyFPHUYHr/QzQOqbN9t7aycakrIef4PWydqpk0rJrYihuOGs9LHP2JN2KrTdl3JuXLAUwMkGLSuWmPM8Zrix9DxL23/EaYjO7WfyBmL0QwVjMARK9mh92HMI9LYdIFrJe0cAuAGpyUWhLBmjZoZMqDmIdLfyjkVBmGxadABJNEsIjn6qNj7wM5/WFNoQFFuYih6a41uA4oaRYVnE8eCR3RMk77FCif35xleVwRegMX9vU/v2JfljmnRJ7ReuIr71STuRdBxzQHp7h2yOU3hpCcgHCnt8Pl+CLHMHZDHqs+AduXX7LArwEOPoIYl/XlK2y0eobtaDbXHisWjuBRKPnA2nGDsiXzSE4781CPutkCb/p4MiwMzULYVMcVg1XVWFbKIAuNmGk2MooktsIr+4AKpdgYKlLiLNRQ1TLgMhFmlXBRvSek6/0X6viLzVFINYzjs8d0mjTmNkhhh/g54B/uacfdTs0ayPzMsW30KHmRFXhmEQxkPinu8xCwtu+CXzqeAjuiuPuWdFxVjj9M5J+zEQzXmiQIfOScU=
+     type : 7
+    type : 14
+    code_elements :
+     type_code : 23
+     p_codes :
+      -
+        code : |1-
+         ListeAjoute(MoiMême,"Effacement Rapide"+glien(graveurEffacementRapide))
+         ListeAjoute(MoiMême,"Effacement Complet"+glien(graveurEffacementComplet))
+         ListeSelectPlus(MoiMême,1)
+         ExécuteTraitement(COMBO_ModeEffacement,trtSélection)
+        type : 14
+      -
+        type : 35
+        enabled : false
+      -
+        code : |1+
+         si ListeSelect(MoiMême) = 1 ALORS
+         	LIB_Effacement = [
+         	Effacement rapide : les fichiers ne sont pas totalement supprimés du CD/DVD. Seules les références au contenu du CD/DVD sont supprimées. 
+         	Cette méthode est plus rapide, cependant il sera possible de restaurer les fichiers effacés grâce à un logiciel spécialisé. 
+         	Cette méthode est donc déconseillée si les fichiers du CD/DVD contiennent des informations confidentielles.
+         	]
+         sinon
+         	LIB_Effacement = [
+         	Effacement complet : les fichiers sont réellement supprimés du CD/DVD. Cette méthode peut être longue mais les fichiers supprimés ne pourront pas être restaurés.
+         	]
+         	
+         FIN
+        type : 33
+      -
+        type : 17
+        enabled : false
+  -
+    name : LIB_Effacement
+    identifier : 0x241854f73e9171d2
+    internal_properties : CAAAAAgAAACK9PL1t+sovKXpsbxuhFFk1pMg+mVWowdigKaP7f+Gt8fNhMT/5PgRURlqVC+AteC8IY0x4FQTZUgr8PuPSdHK8BiwCrcQwkrqiv7HlS4djxr5bmbzAWdtwjEaJhPSbr8Gdzim6XwMUTXuGpiclfs35fspA/POWZVivml3Dy0nrjcI9OqbTmyKXVCHAWtAasBK8y+3SQTqW+jlQaG4bRrZhsHWsMN9i8M9U0iP9xhfEJJTNxOGTdjXJgxEThA7iPqjXVFuHYlI8jUA/xnQrCkCVjcRlupRSYiNxE+hoq0NrIBsBgC4pXtNULrk0LiShEohceKsAj7JHmO1gHdV+AkNFbyQRk6u0zxctdnFAQ==
+    properties :
+     x : 12
+     y : 54
+     width : 398
+     height : 104
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : INT_Eject
+    identifier : 0x241855b442055581
+    internal_properties : CAAAAAgAAADcVdYQKDxtjrAd9dxSYj1gzx1zr3P5V+cIxopcB5Z4HgOlAi7iobpV3TVDXb0WH9/Ld8JtWFH2d1JwOqbnBI96sXs6DQFpI3tmBHLZ4Gbrt7TdnvjQwVfRQmRV5WTMfHLhvmHZ3OMCrQ0DZbtmPPVLES6+8P98t3k51ZZaCy6KmPhLpesFPAT1qKpl9Zko1KduDTznZSBRmtkigTgNPLo+EI0Tw2YySTMWY03r93Fu8PQSOifCOQWOlo7o/evxx9T8DpIr+HY1Sf1FUYrdWEOq/I8rQ5cVuX/E7jBpT2Q+f3dcltlyzh7hQtJ/BwvX2UOm7P715nz+ALbUjFKy24iuPRY/d6eGmQooBsPPdrHdtRVbBDpdihJpsNyNIYlUdUObhmvtLZlXpnMD1KNbz4HsoieFhrSLMP1tcVWTiKWtCzwMDN28WNaYTCm/x2M5FBNX2tnyZkoJi3yzzcQ/lqfOYn0Ne/xfy07V0nyV9IzbQZ1rmhLfaEQ6vuexiOP62dEV2bre2oYOIVaOdyGynekZ607dlc/PksdlBEpVZYapO4NLkSBTLV4vWU5eQyhzRs8f88BjBazTjjf/KFDQ+S5nWA4uzobr26i4vdna+oVVpCRHRxx7kqLwM4XFXKK6iZiE52x1zYQVQpZZc+NpWkwT8BejXEkk8OfCC40VcxIpNkUzcaRmPbS78ddptfahnul/WamoAI0bOe3DibHR8Q5uwjVmQWeohE+d8Y05jioZ1l6Fs9zBUp73FM9b
+    properties :
+     x : 6
+     y : 164
+     width : 412
+     height : 26
+    options :
+     -
+       internal_properties : CAAAAAgAAAB/viKeA3uXEY0lztj4MneSp4a/ffa71xngSYKPd1qtLuV6u6OnrVlJqKXu0YGy7g0/6RSXMiuHFohVMMKfdq4lXAjmp4z9eefE+PgIgcgqm4l/Q+BNaOsMW7DfyVEQh6QjNwvs9FmsSiksgPuLOoP+zcAaVWT+INbWfEBUhv/w1kgJSYT9hT6xZ4JQJIWAuQGYQDV56wm/2ocmzESoFIjdkrSnOPru6aqWZD+Q6sSBcdiX/Msbv8fckYk=
+    type : 5
+    controls : []
+    code_elements :
+     type_code : 5
+     p_codes : []
+  -
+    name : IMG_GRAVEUR
+    identifier : 0x241923ff00bf8820
+    internal_properties : CAAAAAgAAADnK2/C3ZTLCINSQl7GlySydpopMXB680MTtctuY3rpa5rr8fIkHBBOFC+7HtmxEZoKyCtMp2zyymFrWnXaoYZFH6zMkehNSFpencOZAHITWeIDwWX+risNvOdzpmXA5ogVWszGGSeH/hJLRBSpBRjxd/b0u4XMjWOjLdR15G3cidZdeB8OtWGVsN0ApCCtjtfE9dhY3frN4lSUaS3Nr4eZVevKiQzwuFLtOtvRETRLCkULAqSMVjwQAxJ/m+T5eLOB7uQEOllIFmF+SRSl58yB+waHslYtcosBhuh1UK8hcfo/a4TQLG3Dr+4odMzY75/d1J90+nCrl2lyGzdGSHRTLQYo5OsaAAoMZrX06RXCDdMCsta7i69SWrgOGn7zsFDIrkKgsSJUl+92V2Rlsdf5POpKJBQ4YB7SBmn0RLVfT3I9mfnuGH5hhppyMSgdTMCPFQLCzYe9iAjexRMZ9LfF4zG6zl5dCfnztBmPdPO28LC6gVTbtNb1mu1u9x9WsIRxQOqdy7M3mKC83L+A3UCjpIHPcN0IBM8Szqm6uaFjuls=
+    properties :
+     x : 271
+     y : 233
+     width : 60
+     height : 32
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : LIB_EffaceEnCours
+    identifier : 0x2419240500cda126
+    internal_properties : CAAAAAgAAAAroNAS1vsrkcNERpaF1YWvTYZIEPlNlgEOCCuKd5RGeulWSULQ+KzINiQra4WaxDoNnSa+mHBw2n4Bb/lOTrCKOkea5SlmDJfUttEI5NXX5qa6CSjpVdGfcP8/uV11n0A+/0G2oIljY1E1JXxMGeieGk8eEnvTHP06D7hMhh2B0PO4Ln0ViDE6+TQZcjSAY692SmPyEVAvJb6vj1FN0Cq9NmXad34Oma7F5ICPbJCvbG4tZYPy/yjxi+W8VKn67r0XCiDcPySQhnYzDSkTiTYnYGCQv6FH/aqTQXcRYEN4poXJuy55M94syDAZKntRP4/WhfHfT6LJNDniGFeK0HdHwLCW0dqmZgrd+PEYLXa5+gtQPSL0ys+E2BbYAkTJ9xj6phKa7HUSaBpQxkICE5d7VlwbbmLGZq+2lwHYxc0q1KU0BEMaIpKIR42fDsXFFQCv7mBan6kfjSOwcbF+L6vXZH7FVt5EIiM=
+    properties :
+     x : 94
+     y : 238
+     width : 171
+     height : 21
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : IMG_Image5
+    identifier : 0x243132e510a024e8
+    internal_properties : CAAAAAgAAACsC1lp7lytCuvctaylhwNLJjTf7dON7SYBGT8fj5k4PmYh+wTJ5T81COlwYFM0lrlM5oOoErh/qcxhkXV1vTlTXfLfscNdlwp7yTUbZbhUPwAzivgh/1zAjrj2tV4Fo6Pj8YUna7L2m0JqahKyzijc4DJqJ2iqUn04ShHd5FOwDZ8kL5ONMsGwPfKZ8utB7IbIbjc5BKzRbITFMHo48AufIOJEYiExB0W/ooJQ0yF4w4tx24tSU9TOPN5x3nDc/2COo32jatg2BebItaMOGmTIPDLERzsHcBRnhWjFkYv4umHYusGL4kQHH30VPL+b192aCSV9MAw0uHIF2/D4r6FaE8v3LzZJ4bxkuvgCFyQ3HHEzAaVdZPiZXISBlsc+BT3M4WPySsBD6bbavC1+f6iB6l/APdC0Wy1zldf18PhFKTJn0w620D97gpfnttOL8VWf/+ibktYn+Xq0PMVP20hThsNOSkLvXgHM8cO/CQYUJOYHMBtJzi1tlgt0pVOYCpYetVDhYnblgSottawn5FuHzGv3rgBmuND/kJeAwbX5t+rHd917CcgwqQYgqQyCIlMbMJ9U
+    properties :
+     x : -2
+     y : 291
+     width : 429
+     height : 61
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : LIB_Libellé2
+    identifier : 0x24313c7f4af3a7c0
+    internal_properties : CAAAAAgAAAAikEqt86y6Rn5LOoYk2Hd/JPFmIDfNJdnUg7TXYXt3VgV75Fm6TwRHWE3H7Q1J47pC3EqIyzfMUYM5uoS3bXWV4YjstnqwmXneSocKgLve4ovfb3c6PXqiI0OKm35LCNpR/zMDWGWSf6zgU6Pojej2m4ysi35WrcBKWDYeDcAVBGwjIALo9dJXoljBr4WdVQz2epOYTwHoaI0l8Jot4QaEKKU/RaHVIquL3Hdb7/3O4U1GJ7Is/7BhzkBbMIDbwhGKqrjlrxFCqXLZHQiBzRdj/XHppuS4ZGbrJfw5NG81Q/TPngCg2L1isvt3BwPfrgP2KDs/A/ZfHc1fFn1pQhlKgiXwPE4mrBPucj0TOac4vVaZOs2skKoyr9zUyDCzDP7EjQ/+m2iRQcXac/zTLxkwcb4L4lOL9RtTdJ2UJ49h8cBsU6umId2njd/3rtRuJv8e
+    properties :
+     y : 286
+     width : 427
+     height : 5
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+ menu :
+  name : _Menu
+  identifier : 0x2418534726eddb1d
+  internal_properties : CAAAAAgAAADW5sfaLdGdG50Lxjqk0HpI6t3dLzPfYEzZXLMiS+AQiUdcfkfaSZK3jpuPHlTQAxgwfwTj/4CatChl8OMg51NO4o48sbHmd/RPA5yaatVljK2YChb//uQHpYRt0xmxGG57imKKnTPIVCBoL+JP4ikdF00GhcTurrZ+mhWpYczV1fZXmKc1Ubddp5MZzXm04o+N/fVJNlXmQc1m7hPfQkqqIO+342Hym8/mBboo+MCJqvEbUG1CmFlfXgHaImkA0oqTB52ypBSCSOq3SGDNj6OOsRyqTfBavQ==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAACv128ukXIik+8WYijej0O+YHI4fJlQR6Dg72lP9F4z7fdLv7jqE8e4WsXkvd6EjRfAPdRKXqjWMa7/F6VGfTMv492ONGlS/DZ3ou2YA6SX3xNbLgTxjsMaBnOVyzua
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1+
+      procédure FEN_Efface(gNomGraveur = graveurliste(faux))
+      
+   -
+     internal_properties : CAAAAAgAAABMi0hWVUkmSJdWe+b+M8SrjzgtgaAxzL4lG8d7iSsOw+t4UF1h+ddXwuLzCYFeN5izCIMLX+ebGvlOTGfB0gndbtlMWaQI2XaXDwwyh0KnDyTj9v8PnwNRMZsZiPahRJvghzXZOIdm73yVvQ==
+     code : |1-
+      si pas GraveurSélectionne(gNomGraveur) ALORS
+      	erreur("Graveur non séléctionné")
+      	ferme("",faux)
+      FIN
+     type : 34
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+     type : 40
+   -
+     code : |1-
+      
+     type : 2
+   -
+     code : |1-
+      
+     type : 11
+   -
+     code : |1-
+      
+     type : 12
+   -
+     type : 17
+   -
+     code : |1-
+      
+     type : 13
+  orphans :
+   -
+     name : Menu
+     identifier : 0x3ab63da60906c91f
+     code_elements :
+      type_code : 26
+      p_codes :
+       -
+         type : 32
+         enabled : false
+  procedures :
+   -
+     name : ProcEffacementCD
+     internal_properties : CAAAAAgAAACTZ6FBWZUrGJahxrVMK35NDPS1gcYAc4OJF4ijzUTuyJAdanPYkjxODIomXpWR+xiwjg9Ou8kvqeB2d/YeHnTq9dUYOhdcM7/23wB/2dba2fvb3oG8ZWpMMLnLWc+0Jyb6++2UONxp7DyHzDRXigCp83d9ZquuQCi2n5B/vmJXrT26838LwDhSXe5SzwxIIETVuUPIZpY1nDjLL2btpPFmzULCyF80slbM2cQFeL0mHfoXyF7dLhaLuEkFdJTtqjkTxx24v4ZE6/Xk3VWw9resM8esilP5HVfKzzhjdohw0A03UgUz
+     procedure_id : 1448002559758175968
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] ProcEffacementCD (<StatutEff>, <MessageEff>, <pPointeur>, <nParam1>)
+      //
+      // Paramètres :
+      //	StatutEff : <indiquez ici le rôle de StatutEff>
+      //	MessageEff : <indiquez ici le rôle de MessageEff>
+      //	pPointeur : <indiquez ici le rôle de Param1>
+      //	nParam1 : <indiquez ici le rôle de nParam1>
+      // Valeur de retour :
+      // 	booléen :       // 	Aucune
+      //
+      
+      Procédure ProcEffacementCD(StatutEff, MessageEff, pPointeur, nParam1)
+      
+      // Evénement rencontré ?
+      SELON StatutEff
+      	// L'effacement a été annulé
+      	CAS graveurNotificationAbandon
+      		SI OuiNon("Voulez-vous vraiment annuler l'effacement ?") ALORS
+      			RENVOYER Vrai
+      		FIN
+      		RENVOYER Faux
+      		
+      	// Erreur détectée
+      	CAS graveurNotificationErreur
+      		Erreur("Une erreur a été détectée","Code Erreur : "+nParam1, MessageEff)
+      		RENVOYER Faux
+      	
+      	// Effacement terminé
+      	CAS graveurNotificationFinEffacement
+      		SI nParam1 = 0 ALORS
+      			LIB_EffaceEnCours = "Effacement du CD/DVD terminé"
+      			ferme(FEN_Efface,vrai)
+      			RENVOYER Vrai
+      		SINON
+      			Erreur("Erreur lors de l'effacement","Code Erreur : "+nParam1, MessageEff)
+      			ferme(FEN_Efface,faux)
+      			RENVOYER Faux
+      		FIN	
+      	autres cas
+      		renvoyer faux
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : ActivOSX_0_D_15_03_29__25_11_2005
+resources :
+ string_res :
+  identifier : 0x14185317002d20c6
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

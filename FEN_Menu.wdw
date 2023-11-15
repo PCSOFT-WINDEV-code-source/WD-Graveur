@@ -1,0 +1,402 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Menu
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_Menu
+ identifier : 0x275d70ca07867e8b
+ internal_properties : CAAAAAgAAAAe17V25Eliu4OTHAgpirQam+rV326hr35tAQ2M+nZPFW8bd7v4uW481OUjkLFTOQRhiXqWM9uwbuYpueNN1654kGxhdF/M089I61AbgW99WqJp6+aPBgnwMg863bkTGOD6E1gPxCP4HmeSCu+5Wb85wwoTz/vahJkOxP+HpY0Ek3LCI5qE7wW7JkerzeRrrvHSQ4wPJ8f5bBXcRy2yrlf/+cEr812PAfUwzCdR8KBt9h3YikOc+QG6vbtIzcztY0hSt6X+fviou9ssUKvuKU/vORxKyI3mS5TaL1fOpVkSkrqLeuO8dPwqLQn/2CuyXcKpf27/SFrYgUvPv2g/1+JZBXiMD9fKfgCOLFB0h0AsIPQTQWkgKhm81lGfHDo0XJKAhsSyooPsaEZd0F5rLWI3MhDDhaflCLTMuGKWescyQOb0BZ8FofB4uzo6fuPXBuypqiiajG0C4MeFwocrtzlwSPYFCo49+GCoZEdShkorHJOnf61JjJulkHH/df2ymSx9cZtH/AHeQQQ5JeuSl4YWTmn3SZXp3srWPLfHHfqprW+yfXV7VAzCD8fFOC6m+UPvJ9iIvfqKfEVC4yVpnvPJ0n8qTLpBqZm8VA==
+ properties :
+  width : 460
+  height : 160
+ controls :
+  -
+    name : OPTION1
+    identifier : 0x275d70ca07897e8b
+    internal_properties : CAAAAAgAAAAYLB34KYt+A4NHzW4l2m1IPkm63Gxvj/Pw4iKFCPFyuXsn5pXbE2UIIEys9L1xRUT9+cMKuc7Hkfwzj5VjsyXZOuJkwAo2dwwt++VRWskq9XxoIhtL9VQCFDnPnC6SoPAAKN5ixBi0MajtIOkopbP5c+t4CEn9BVF2U1mEaN0UmLn7S87+mR5LuRcmgpFXrSczlintu6mRWxwNWDryscvNm07PLFJBsZzgpV1W9EyrN5KW2A02YTtZc8Vq0uD9Y+f3PuhzfhREseAq0cHVyh5vxJqMc5N8LJv1qi+/BcQAdeY1EEcLEASfpVzn7yaYOCsEDTpiXSVzNW3icLYfygb/W34/a4bqx7jOwXyGgRLEcJIRNsdXPTDJeMZ41J4g+Ews68xOJzngXzMG4WvtaU5LuNk1HnJeZn6UFA+/ik/4YT4CCs4XIYTabSRxPsBUPpTrQDmQkJLmH+cM6P0goCMpIBNuCyuEuOi7LC+t5Izkd1rn5qx4oafx90XTaETuTDBqtk/pgA4JxDIrTtJNz4ID22/eP2BE0HY9XyYZk0sAx+ftgn3gun6aWCoWWaqAS4RZnyjxUdOn73dZlNNIA3oyX5PZOmU3tsK9oWI24fgNVa35CwEEnzceKjoYEUaa/80CcwbLYQLVY35Z0BpMcB2GGH1rIFn7A+6QRdBK17pPzOifbQqlw5PJT7iBPJuvYbI+dC5Web83ZsKq5tGLCgmfSEryym5PT1CbRc4g67qkNZHwJ4jtp0lDvz9TOpwbrKDXESk+bEq2PFjZUcf2mM4PFN3gl+Gt6nMZrQ7KP0YhtvDoyrzUwzxcImTqUdMDjeu2W5pohOw6CiKHA+VuWQSyn110Bn5Zeq4/pkj8pT8BIzx9NMm6fjZaMA==
+    properties :
+     x : 15
+     y : 17
+     width : 128
+     height : 128
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         si OPTION1..etat <> grise alors
+         	gsChoix = "données"
+         	FEN_Menu..Visible = faux
+         	ferme()
+         fin
+        type : 18
+      -
+        code : |1+
+         
+         si OPTION1..etat <> grise alors EffetLoupe()
+        type : 66048
+  -
+    name : OPTION2
+    identifier : 0x275d70ca078a7e8b
+    internal_properties : CAAAAAgAAAAp/hyZSylpNBSBqKjyJotkZLpJR7YbMS6jB5+cxS8nVwyhGxb7VvivKJz7duQBNqvT+siDGq0HIhsNKmkYk4hGPfWBiRA2AGSbJY6wcAyUXjomzvp6XiRp5IeSgrzbEkKNodj+AA1CuH/Mfng3NFtJvhaTA3t4B1NJRYCYpbTWKOn2/RDazpd/cHMuS+r7QAHMZCCwJBTwhgxNJZtPJKxweYjMDeAlbubYZpQ0DamgAhOZ0cqYx4Ll5DZQ5YqJl3VRAKUQkxGUrhW+9XQccJkohDGJJfW+fIpwWzUQH5WGK4R0+VDIBelKavqS6NXZ0g1MWCkhlVksmbVVUG3ZNnSrE3wAM50TwhqQOrgFMqr14apW7vSJ8Plc/QC4oeNd9PZorcW1QVT+jozaHT1t6L9jZifcU0woHeUcvuiuDOgyRIxzEWI4HLEQxRfhXuAsi9MzyQXhsELHal8FOBWsUf4JhGOhK6cu8UcKNhaQijZGqriB62ovVLGg4J7rW7MrRYtjF30Pq1jxGBztttoKjvl7gARalrtVN/nU6zmNbiSZzcFbWAwSezEOgg/3yZjOd0CPKS9Qlz5JKnbj+dSkmkQHYUM4PIA5praXmxowwNd80uU9dhXMDsGZ4Bw0+z1AOyeObauFYb/WrZReG2U5J0yKEqodu3VoBxshpwf7Ha4T5qKh0H71p8ZzmN9U0nrGT4Zz5L7bKWXEWxqL1xwTXCA3V6uSGhbBTEsu7l3EsIpp2NxBErpWYGkc60M=
+    properties :
+     x : 166
+     y : 16
+     width : 128
+     height : 128
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         si OPTION2..etat <> grise alors
+         	gsChoix = "audio"
+         	FEN_Menu..visible = faux
+         	ferme()
+         fin
+        type : 18
+      -
+        code : |1+
+         
+         SI OPTION2..Etat <> grise alors EffetLoupe()
+        type : 66048
+  -
+    name : Image1
+    identifier : 0x275d70ca07887e8b
+    internal_properties : CAAAAAgAAABfk01C4UuByJqSMOD8hs5iJaMKRKvx7IbWBIZ16EKl1qAzeSsZwUjDMGpJcK17HHD4Xt9aeI9oHwd/xik6JRa8zSpbMANI1O+PlqCIxifGCLHi617My5ophMV4Q2RkyacIlb8PC8+ff9xgIQ/kjBMwU+xiplqu20hXlORrLs+un6EiroJmH0S6CRlM8ODjiqzPSoRs9hThmfOjDs6thuAUM7RN0tSlsmBEE2AMY+mksPaFu/hFmLoePs6tQwhhlqGcL1Vlgz6crghsY98sGABxJakbQiOxaxSbB89LlAo7ISCuWv7WBa5UDYl09TeqxV02kNLgapeIuTMnvEJU8i7lmTtZaimnVq+cDKK63fzGnBhAUdbTb2xU+IYUjws5YjmjCuEr/OVcTOjIIFtt+2FmRxn78bnBrzfZOgVQ6O22GC30QLH8C9e+zUExNkilJgPa452WtCAshr6p1vcQW/Q/WEAuTDTnS7mfV0oxERzb2+tfPs2E0yuAiztMSA9Eqj6pWXOGBE6aFdEpAV5nxmG+1dSa2L04qAF9F2oYzzvbMtM=
+    properties :
+     width : 460
+     height : 160
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : Image2
+    identifier : 0x275d70ca078b7e8b
+    internal_properties : CAAAAAgAAACYp96QhYiII9FX7T56KyAC0PTv7VCl1W6USSoVtz4raM5TxCNxLylMoqQeplHGW0oHzQ38XbGhJLzGUgn62K18gIuNC6GwRkLQ/tWWkJ0B+5HgSok38/778xJbzAM7ZBWGNc0Az5Soisvpo9HpCkn0weznj/aeWqbtYkpNvwdj8FQJreAV+iIvECUS/UdTl/e2AbJQ8jxPkVsh0d1DccerDs/LJ2l2M15PpeHYzB12mseNr2oF+NvBWwr44w1wSxPF52WTloZzgQRczDNyzdqry7MkEVRQspl4ewy7wK/OLkIU8gvEm+2joaJZUkhn7AOOjXBRwF1RZxAj714+GWn2+/wmSD0DN4JTX+ZaAKxXsxaI9RpNVvfIBVmoSit/3TYzk1u2hdqUsWDowvqb7zJifGFzuw4M5lbr5VUNhaYgxLE+aTkT94YfzFTAKpDz0dHtdf8wnCi4KZo+81E3GPKL9oY+fO3dpBKYL9+TUSngSXv/Xd5qSeeDYMvibmrB6TiWVTeKTY2mHp5AGOuMhXHz1wFTRbhK708n/5+13Mt5udi2pMrbvjiDPLxxUiK2DVNXlLV1eKDsafv/bMk+JOnfYn/TQAflG1nagrlKAlE3EMnHbG8mxBVGm/jQcImcK451gQ==
+    properties :
+     x : 25
+     y : 166
+     width : 460
+     height : 160
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : OPTION3
+    identifier : 0x275d70ca078c7e8b
+    internal_properties : CAAAAAgAAABqJULv3FEzV8CEfLTM6H0HaVUFVSh8QVVRsaFtFRrBUt0ZaEwux7qCzUyj4yF6VPO6Mx+xSHs8mWv8PHiNG5H7xhRvefzSakD2bVaqPPfRnHBphOyB7CXjxYggl4nWZLFQNSU36EQiJGyodABPnq/ON7U1ojiRJVTr67Bgq19yuqm5MLV2al7nauApu0bWBLBqwxYxHtXMiLDqyZVQpmmHW/iVT7mbekJ8FJkRFXpkOSBHz/OzbQSvYcbTwXRdo1o1acuVCKkHJ9QD+ES2m4xe8lR6iB6ffSwgxVM7zAT2bUm+tEfVBJ0QVldZu2boOb1/OK0J0TihvQDM+9ISaH0VKDGHLvi1ki1PMGC/uOmmuQhsz8pyEUanDxS10ZrTsQNzFobbDuGIZjlF6gDqdVOiO/8vqp16EJ/xWA5Fb5u45sDLqh46khJyrPV5Z7XVrcnJLCGfMqOxxuPehxvu/Zmmrz+FTLpzRQGmKomyX6Q3EyERiZbIoUZuoLDjh9ki2B/QHJsVMYtnwBuR2Lof9Hr/ZHrBkAwoCwIWXZdaL5AoJTsc9uWBxhG+z2Zxn1/efLg9kewC8GyBlDCHNC4XoifhmvOykICF6oCioy8xiuGYG6dcQCRHrUhILIZv1tm+
+    properties :
+     x : 317
+     y : 16
+     width : 128
+     height : 128
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes :
+      -
+        code : |1-
+         
+         FinProgramme()
+        type : 18
+      -
+        code : |1+
+         
+         EffetLoupe()
+        type : 66048
+ menu :
+  name : _Menu
+  identifier : 0x275d70ca078d7e8b
+  internal_properties : CAAAAAgAAACPzUo2erjRHVjlcpsA0ig3YMnjfx4dJMCy2fK2AywdHHwe0aVfM1gNGs9KZmiKfMv3uuS+D4VuJa1bOEZ9xwlXKs7CvlLqs18qHcm0ynwBVdAP7+Yj+5PALXncJl2uQojw2Q5gyw+sQXGsEOzLkJe3kulo+svmBm7XQzVQO/ecABZxDuI7cFW1zDlZxilwPAvtB8u5AondeJoQ878piYDki3QDlf/CQBEByG1NsGcVtDyRT/FdSCpxz3SawVQV2Umlr2HnrB+58qhvU8Sn/TJ0BCNzcxgvHQ3n
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAACj21OKvU4+j+sCXhzKi1+6fD40EH2G2agiYVOhc9EuGs6DO9wIU6NkOkUWd2wA/RQt4gGh9zFnQBt8njYjEabxKp2uAB2KNC7bRgGMP5ib4xdnIhDlks8mEk/xty+W
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAABTJQpxVc6Gpn/8n3q8h/g5+02MPChtExMHqjuYKKXv93E0lmBbePnNGDOztFBepU6fqgoAEBS2WKrR9MlEjHrYMTXIH1kIjPxQko5YWl50fm/dPGcu95o7PFwpQFs98xjJuatlRof+mlx+r/Q=
+     code : |1-
+      gsChoix est une chaine
+      // Nombre d'options
+      NOMBRE_OPTIONS est un entier = 3
+      
+      // Centre la fenetre en haut de l'écran
+      MaFenêtre..X = FEN_Main..X + ((FEN_Main..Largeur - MaFenêtre..Largeur) / 2)
+      MaFenêtre..Y = FEN_Main..y + FEN_Main..Hauteur - 300
+      
+      // Affiche le fond de fenêtre
+      AppliqueFond()
+      
+      // Réinitialise l'effet "loupe"
+      AnnuleEffetLoupeTous()
+   -
+     code : |1-
+      
+      Timer(PositionCurseur, 5)
+      
+      // Pas de graveur
+      si GraveurListe() = "" ALORS
+      	OPTION2..Etat = Grisé; dModifieSaturation(OPTION2, -100); OPTION2..bulle = "Aucun graveur détecté"
+      	OPTION1..etat = grise; dModifieSaturation(OPTION1, -100); OPTION1..Bulle = "Aucun graveur détecté"
+      	gsChoix = ""
+      FIN
+     type : 34
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+     type : 40
+   -
+     internal_properties : CAAAAAgAAACftl5JczECL+EGQ0mqMkSXxM5QViHcebExomR6Bhlf6cgljZVMK2E/qhFai5VEiSRrP+nnfOX6D6C5fWbv9xeErYH1/ezb9Zsxqta7tTM6UUtwAQt1E3X8fbbjPZvDkgTppfIQQkNfbnKV4pk8AStD3o0LzY+OH3saTymMrxkQEw==
+     code : |1-
+      selon gsChoix
+      	cas "audio"
+      		MDIOuvre(FEN_Compile,"CompileAudio","Nouveau CD - Audio1","Audio1",CompileAudio)
+      	cas "données"
+      		MDIOuvre(FEN_Compile,"CompileDonnées","Nouveau CD/DVD - Compile1","Compile1",CompileDonnées)
+      	AUTRE CAS
+      		
+      FIN
+      ferme(FEN_Menu)
+     type : 2
+   -
+     code : |1-
+      
+     type : 11
+   -
+     code : |1-
+      
+     type : 12
+   -
+     code : |1-
+      
+     type : 17
+   -
+     code : |1-
+      
+     type : 13
+   -
+     code : |1-
+      
+      // Réinitialise l'effet "loupe"
+      AnnuleEffetLoupeTous()
+      
+      si fenetat(FEN_Bulle) <> inexistant alors
+      	ferme(FEN_Bulle)
+      fin	
+     type : 66048
+   -
+     code : |1-
+      
+     type : 66049
+   -
+     type : 65543
+   -
+     code : |1-
+      
+     type : 65544
+  procedures :
+   -
+     name : AnnuleEffetLoupe
+     procedure_id : 1683625848606064267
+     type_code : 14
+     code : |1+
+      // Syntaxe :
+      //AnnuleEffetLoupe (<Bouton>)
+      //
+      // Paramètres :
+      //	Bouton : Champ bouton dont l'effet loupe doit être annulé
+      // Valeur de retour :
+      // 	Aucune
+      //
+      Procédure AnnuleEffetLoupe(Bouton)
+      
+      // Variables
+      x est un entier
+      nx est un entier = Bouton..x
+      
+      //
+      // Réduit la taille et les dimensions du bouton
+      //
+      si Bouton..largeur <> 80 alors
+      
+      	pour x = 80 _a_ 128 pas 2
+      		Bouton..x += 1
+      		Bouton..y += 1
+      		Bouton..largeur -= 2
+      		Bouton..hauteur -= 2
+      	FIN
+      	
+      	Bouton..largeur = 80
+      	Bouton..hauteur = 80	
+      
+      fin
+      
+     type : 458752
+   -
+     name : AnnuleEffetLoupeTous
+     procedure_id : 1683625848606129803
+     type_code : 14
+     code : |1+
+      // Syntaxe :
+      //AnnuleEffetLoupeTous ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      //	Sauf (valeur par défaut="") : Optionnel, Nom du champ bouton dont l'effet loupe ne doit pas être annulé
+      Procédure AnnuleEffetLoupeTous()
+      
+      	i est un entier
+      
+      	pour i=1 _a_ NOMBRE_OPTIONS
+      		si moimeme..nom <> "OPTION" + i alors
+      			AnnuleEffetLoupe({"OPTION" + i, indchamp})
+      		FIN
+      	FIN
+      
+      
+     type : 458752
+   -
+     name : EffetLoupe
+     procedure_id : 1683625848606195339
+     type_code : 14
+     code : |1+
+      // Syntaxe :
+      //EffetLoupe ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      Procédure EffetLoupe()
+      
+      // Réinitialise l'effet loupe
+      AnnuleEffetLoupeTous()
+      
+      x est un entier
+      nx est un entier = moimeme..x
+      
+      
+      //
+      // Augmente la taille et les dimensions du bouton
+      //
+      si moimeme..largeur <> 128 alors
+      	si fenetat(FEN_Bulle) <> inexistant alors
+      		ferme(FEN_Bulle)
+      	fin	
+      
+      	pour x = 80 a 128 pas 2
+      		moimeme..x -= 1
+      		moimeme..y -= 1
+      		moimeme..largeur += 2
+      		moimeme..hauteur += 2
+      	FIN
+      	
+      	moimeme..largeur = 128
+      	moimeme..hauteur = 128
+      
+      	ouvrefille("FEN_Bulle"+sansfocus, mafenetre..x + moimeme..x, mafenetre..Y + moimeme..y + moimeme..hauteur + 10, moimeme..largeur, moimeme..note)
+      fin
+      
+      
+     type : 458752
+   -
+     name : PositionCurseur
+     internal_properties : CAAAAAgAAAAKZRZg//egscjYV2GmJHu+eQYeSvaxPWY6nJTBsQqKm4zJazoJdBDpouoWGC5YqW6qkgbDFoiVszKO/YYcDpQhWRqIjAjIP85gaPLT2yBvFFW6KjxMAa5NK1hjQx7DU3q6Caoa0xTYEwcyze431+qXsPYM/Qs853xnLPt3/CyckeEDu3n61TwZx+RGzsPHsqhbJDc26eI=
+     procedure_id : 1683625848606260875
+     type_code : 14
+     code : |1-
+      // Syntaxe :
+      //PositionCurseur ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      Procédure PositionCurseur()
+      
+      	fintimer()
+      
+      	nX, nY sont des entiers
+      	nX = poidsfaible(curseurpos(cpEcran))
+      	nY = poidsfort(curseurpos(cpEcran))
+      	
+      	// Si la souris ne survole plus la fenetre
+      	si (mafenetre..x < nX < mafenetre..x + mafenetre..largeur) = faux ou ...
+      	   (mafenetre..y < nY < mafenetre..y + mafenetre..hauteur) = faux alors
+      	   
+      		i est un entier
+      	
+      		// Réinitialise l'effet loupe pour tous
+      		pour i=1 _a_ NOMBRE_OPTIONS
+      			AnnuleEffetLoupe({"OPTION" + i, indchamp})
+      		FIN	   
+      		
+      		// Ferme la bulle
+      		si fenetat(FEN_Bulle) <> inexistant alors
+      			ferme(FEN_Bulle)
+      		fin			
+      	   
+      	fin
+      	
+      	Timer(PositionCurseur, 5)
+     type : 458752
+   -
+     name : AppliqueFond
+     procedure_id : 1683625848606326411
+     type_code : 14
+     code : |1-
+      // Syntaxe :
+      //AppliqueFond ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      Procédure AppliqueFond()
+      
+      dcopieimage(copieEcran,image1,copieSrcCopie,mafenetre..x,mafenetre..y,mafenetre..hauteur,mafenetre..largeur)
+      dcopieimage(image2,image1,copieimage)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : fnMenu
+resources :
+ string_res :
+  identifier : 0x141fbdf500f79090
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

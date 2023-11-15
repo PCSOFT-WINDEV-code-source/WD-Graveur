@@ -1,0 +1,88 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Bulle
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_Bulle
+ identifier : 0x275d713709cb2ae4
+ internal_properties : CAAAAAgAAAAjel6N6QtHj3VE5NlknEzJhtyj6sqeIYKK2ZjSAVcsEqHij87hwkU4Er2GNJGEKRQ7Yvw75yoRsYTGQn1jRtkSFTgEReyrd0WWcI7PTsBTDqRkjsvVGBeR77eHKlYImRFE9a/noD768E7D52QEyyTD/GRYuUMeYXUNqzsgMk5CxOcyGzOekhNCEpGwONdKOpbbU35HjLAPlcPiwtBgUCgtNK3zlqzm2+Pnt+f/sIsGxFcIEu9SrC7jluYmAkAFXuGKgeJpQyhaps3q1crxQmzgf0TPGecKvKiwr4hpeAoT0Obh/8RJf0XCaq3k1FfVSZElso9+M0yzg4P5EtJIUHQwweffkUCeVai+WRTvscWIuy/KSoutKszRIY4uYxlTXYDMZ5GJvv7u85mOXS60dQx4jI3JpX5f7XYrkz3AgN8PxPEulyOUmLwXW7hEweNb+YhW2WKUAb14XZJklny4ePPYBarx6/1c+QQX6yi7AzLcCO4NEo+1I/XB2ATH8mjKJDi4JSxUsnnM/WDTpqknILs80mgVgkwf2j1nv7LyGucDgpY42mQPs3WT15OP3+JaufYj4KctXDFUz1TNZU98HH1375F8preHOnkAB68gh86lKWnrkr6v4/pZyYu09/yiW1i0uWW0TDYfTr1MUaG4LlQ=
+ properties :
+  width : 80
+  height : 32
+ controls :
+  -
+    name : Option
+    identifier : 0x275d713709cd2ae4
+    internal_properties : CAAAAAgAAAC3atd9yPs8JQ7GTe1NwWyRnsCIHz8dU3+SUkgu59b0VoZsnbx1kJHs8IImVp2sRA6Xl8u4svdwdR2j2KoMGzC57C1zc8+5LMsKQnG61JTvbEL9p78jHy85+Fpy6ZRKf6VliyThFr6as9uMDQIbX1GwMsvvmuOdumBhA+l4/UID8dd/IWfgVPizkXejoLxFdzjOHUjxH8a1ibSK1teFkkZ0Na8LMT3xM5P7M+MEqdrNmioWJthtqs4YLzL3CWg0uf/kWCPGFiRgUosJZjllRpow0C1lR57pcx0Wq3nxvytZPjYTMiOldxtNXTbwin1Luh5ZX8UaIrplU/IUmIvhqxo6Cmwbh6IgzGSCG655czs5wPt0FCwI
+    properties :
+     width : 80
+     height : 23
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+ menu :
+  name : _Menu
+  identifier : 0x275d713709ce2ae4
+  internal_properties : CAAAAAgAAACPzUo2erjRHVjlcpsA0ig3YMnjfx4dJMCy2fK2AywdHHwe0aVfM1gNGs9KZmiKfMv3uuS+D4VuJa1bOEZ9xwlXKs7CvlLqs18qHcm0ynwBVdAP7+Yj+5PALXncJl2uQojw2Q5gyw+sQXGsEOzLkJe3kulo+svmBm7XQzVQO/ecABZxDuI7cFW1zDlZxilwPAvtB8u5AondeJoQ878piYDki3QDlf/CQBEByG1NsGcVtDyRT/FdSCpxz3SawVQV2Umlr2HnrB+58qhvU8Sn/TJ0BCNzcxgvHQ3n
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAACbA2syhWZGN0Nq9sRiI4fyJLb8yFWCMQAqWRtZGzmghkSTu1xI02PkOoUWd+wAPTTNwqFB1xGHoLvc/lYz95zpIpX2qEWCTMazbjlUx+DTm6//SniNKme++meZzweu
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      
+      procedure FEN_Bulle(x, y, largeur, libellé)
+      
+      moimeme..x = x
+      moimeme..y = y
+      moimeme..largeur = largeur
+      option..largeur = textelargeur(Option,ExtraitChaîne(libellé,1,RC),tMonoligne) + 10
+      option..libellé = ExtraitChaîne(libelle,1,rc)
+      
+      moimeme..largeur = option..largeur 
+      moimeme..x = x - (option..largeur  / 2 - largeur / 2)
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+     type : 40
+   -
+     type : 11
+   -
+     type : 12
+   -
+     type : 17
+   -
+     type : 13
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : fnBulle
+resources :
+ string_res :
+  identifier : 0x141fbe160105105f
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

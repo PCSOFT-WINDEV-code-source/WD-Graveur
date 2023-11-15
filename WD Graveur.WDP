@@ -1,0 +1,181 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WD Graveur
+ major_version : 28
+ minor_version : 0
+ type : 4097
+ description : Exemple WD Graveur.WDP
+ subtype : 0
+project :
+ identifier : 0x0
+ internal_properties : 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
+ configurations :
+  -
+    name : WD Graveur
+    internal_properties : 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
+    configuration_id : 10511713955068731591
+    type : 1
+    generation_name : WD Graveur.exe
+    version :
+     version : VI200030B
+     internal_generation_version : 1
+     autoincrement_version : false
+    icon_filename : .\LASER2.ico
+    language : 1
+    new_features_help :
+     name : ""
+     internal_properties : CAAAAAgAAADFXeIQ27RFqW3pyPvTIwEShUtIwoBBTygfA9XT5pcOuiKnuvW2mkle76g3PUpTk3vZJf8WVhTyBBjGQg==
+ elements :
+  identifier : 0x4ac60047001fff89
+  elements :
+   -
+     name : WinDevMessageBox
+     identifier : 0x4e7a08ff0243fb3e
+     internal_properties : CAAAAAgAAAAS6EpebdpSDSq6K+VDuDl5QDOv97LCg3pVoQIG5lhErAjmxLhdm1YRc60X4aFfG413/w==
+     physical_name : .\WinDevMessageBox.WDW
+     type : 2
+   -
+     name : FEN_Compile
+     identifier : 0x4406ab990001b8d4
+     internal_properties : CAAAAAgAAABl4U1RbgsjPItbQD40WphYP5KOli9lD25ORwPoDvYkjGhEpFi8RP221E5IsHBgGIhw8A==
+     physical_name : .\FEN_Compile.wdw
+     type : 2
+   -
+     name : FEN_DiscInfo
+     identifier : 0x4406aac200007300
+     internal_properties : CAAAAAgAAAAwDmi0cyiAm6QIfUvh2AtfRnUt5crWgraTnjN+9ACcdJxGoNw/+ajjATulE5NNNasVHQ==
+     physical_name : .\FEN_DiscInfo.wdw
+     type : 2
+   -
+     name : FEN_Efface
+     identifier : 0x441854010003b392
+     internal_properties : CAAAAAgAAABg3lhEY9hQC9S4LZtReesfanthacCwNr1W3XSf7yX38dsb742PqVgTcasV46NdJZtl7Q==
+     physical_name : .\FEN_Efface.wdw
+     type : 2
+   -
+     name : FEN_Main
+     identifier : 0x4404863c000133df
+     internal_properties : CAAAAAgAAAAacMLG5aIKFdKyE+17lNF5eFs3ryAEbH5VkK/eoHSYWLwCyKRlk04Je6UfmRnXoxX/Bw==
+     physical_name : .\FEN_Main.wdw
+     type : 2
+   -
+     name : FEN_InfosGraveur
+     identifier : 0x441fae0b0000677a
+     internal_properties : CAAAAAgAAABh3VlNeiePoK8PZFKYsizMoyaSSoMCXUWKOIQh/hZ8vADMHNBI8KHaCDKsFJxULJxk7A==
+     physical_name : .\FEN_InfosGraveur.wdw
+     type : 2
+   -
+     name : FEN_Menu
+     identifier : 0x441fbecf0001e50b
+     internal_properties : CAAAAAgAAAAcenSgH0Ts/0gcAX/14V/jfj81vXTbODdKhHcGD/WfsQPzNyX7Bbz3FQ+Jdz+xSb8JCQ==
+     physical_name : .\FEN_Menu.wdw
+     type : 2
+   -
+     name : FEN_Bulle
+     identifier : 0x441fbef9000285bf
+     internal_properties : CAAAAAgAAADDvztvXAkhOoUpmnTyH07aWTqkpI/+B8BfmJB2tW8vqRflKzHuCseA4lxGsnJuCv7GTg==
+     physical_name : .\FEN_Bulle.wdw
+     type : 2
+   -
+     name : WinDevDialogBox
+     identifier : 0x4e7a08ff0245fc38
+     internal_properties : CAAAAAgAAADUsjx4Rzx0d8Bk2be92xs/jpONXXpqYXGhxgf5h5cFg3G9Dd8zzYQ/rZcB/4d5AffBQQ==
+     physical_name : .\WinDevDialogBox.WDW
+     type : 2
+   -
+     name : FEN_Grave
+     identifier : 0x441e663200000669
+     internal_properties : CAAAAAgAAADBvTltWgcvwI8vhPJ4lzhY37wqcklXlX22scxRLdfHMYtlp7VokEF66FJMtHx0DPzETA==
+     physical_name : .\FEN_Grave.wdw
+     type : 2
+   -
+     name : Procedures_de_Gravure
+     identifier : 0x4ef49a0700ced709
+     internal_properties : CAAAAAgAAADLRzPX1JGZQleBaar46S3Rg6LaAr+EqjpK5EA9cLRmskr6DVphXximdNTOKurmkgbOVg==
+     physical_name : .\Procedures_de_Gravure.wdg
+     type : 7
+  other_elements :
+   -
+     physical_name : .\OUVRE1-16-5.bmp
+  analysis : .\WD Graveur.ana\WD Graveur.wda
+  net_assemblies : []
+  uwp_api : []
+  external_components : []
+  internal_components : []
+ report_and_queries_enabled : false
+ common_generation_directory : true
+ languages :
+  - fr-FR
+ code_elements :
+  internal_properties : CAAAAAgAAAAMnlOz/wVTXwnbEZzs7vVyMx7KIBtShThItHOj3G/90EmQjQjjLn7Xvp7vB3ikHpy/rlipRCkFJWL5J4TzfulkTjKcQlUXRn/GZotZ+l+sy1zy/YstZKwNdrDp/r3lyPUuI+8=
+  type_code : 0
+  p_codes :
+   -
+     code : |1-
+      extern "KeyConst.wl"
+      
+      Constante	
+      	CompileDonnées = médiaType_Données
+      	CompileAudio   = médiaType_CDDA_CDROM
+      fin
+      
+      globale
+      	IndiceCompile est un entier = 1
+     type : 196608
+   -
+     type : 196621
+   -
+     type : 196627
+     enabled : false
+  orphans :
+   -
+     name : WD Graveur
+     identifier : 0x4ac60047002c0006
+     code_elements :
+      type_code : 159
+      p_codes : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+rad :
+ internal_properties : CAAAAAgAAABhIL0UXeZmxDJxY3Xy0Q==
+project_explorer :
+ explorer_type : project
+ children :
+  -
+    explorer_type : windows
+    children :
+     -
+       name : Gravure
+       explorer_type : custom_folder
+       children :
+        -
+          name : Procedures_de_Gravure
+          explorer_type : element
+          type : 7
+        -
+          name : FEN_Grave
+          explorer_type : element
+          type : 2
+        -
+          name : FEN_Efface
+          explorer_type : element
+          type : 2
+     -
+       name : Infos
+       explorer_type : custom_folder
+       children :
+        -
+          name : FEN_DiscInfo
+          explorer_type : element
+          type : 2
+        -
+          name : FEN_InfosGraveur
+          explorer_type : element
+          type : 2
+resources :
+ string_res :
+  identifier : 0x0
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAAd98VSJfHHqE3P0QHwrwdhn7ig8dWBR6valpUTgnAMTVXiDg==

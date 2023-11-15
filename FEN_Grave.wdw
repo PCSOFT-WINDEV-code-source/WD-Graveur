@@ -1,0 +1,537 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Grave
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : Fenêtre de lancement de la gravure
+ subtype : 0
+window :
+ name : FEN_Grave
+ identifier : 0x241e65cf038283ff
+ internal_properties : CAAAAAgAAACUa0noNXjrUnwWxsrI63REFspH4eg89uXNK3UGwiZhnYAsu2egC+Yt3IM2A6hTd8qBVbzickAsVpSvnIjej6YZz8X24CI00JSmhwMFBjFw/5fTvWCn2vKX73XgpCbkUvUw/SG6zQLYe/5k7YLAImRLSWQz17wU26l9ELBLz/mUf3iTrRQ978jNbqyobjXIgRL51ziclmcZiuy2w7G/4PIkKyG6NokiwKw2NPRZAA1D/368+H7GIRSomqaFPSp/KR4Ij5EXXEPzGXprOpO/o3HGO1WR3H9wRW44KlpD4gLBqkjcfhVWAUau0jkI+ODYFWS79RbT7NGigyFpNxgg9dByg1O5kIekNrYKAhmk5tLSOt06Im7kEg36qZQw+9giiDRiDJN2BvjuqqMiLyd3qWd2EwrgdHiS+KxhGlzWbp3eRbgxNfYYSljefTr3Q9oO+jgHo6Bm9NPzFwuHboMC7bRtxpNjEPY9CUx2vXpsGaf4Ced4Teubbxu9buoBdIXe9EeKJmK2/C64mY+owvIlE5MJ4oVc3bcrdq3eARstv9hyc2u8d3VDluw5S/luqN/RKnNEt9eZR16XILj0IdMStN88v8j3i2MhKeP3jt1fgfqydwGgbtWuzdJUuRzofWS8znpa6VCQX+ZWLDn9UuchbLtbUvTA/uZU47jGYcFLcgrGFgobgRG1F2cd/jBEr1j6pU9Mp9AcVwFjCiYra4nnsojzxXGmcu7zhZQ=
+ properties :
+  width : 391
+  height : 436
+  widthClient : 389
+  heightClient : 404
+ controls :
+  -
+    name : BTN_Annuler
+    identifier : 0x241e661305c390ad
+    internal_properties : CAAAAAgAAABQSVhjdFSdrCWQVvarCSCxT2gwR/3qCMiWExNj7hvKd1JYr/mI29twoui8cTYyaHXRvKFwObNEJ+f19K6ymHFrKMqg6n8TKB2Oe35KH8kU1V7Jx7WSgZYLtWBWCEBF40//x+yqAon7R17q3RvB3+WnKkbcgi43AbLbERnp6B3w9FadhssCNBhu+YWXbEuGjLSGURJlr+Lma+hKoVZQMghrt4xClk+WZXMdZxUs0UhyoEK7Vnw6KDILnhzozZCYf9EPIHaB7EDv9E9ytr45p3fWU2L++BRMr/ruHdbHIggpVIpg9Lfhw217jWvmHqDBs83vtODP+YJDpRgXUA53i8eRFHECqe32pFf1qeSqXKMVEliyQgVMatVJCGbpqSZ6KQp6DKM63TEH6XLNUF1guiJwww+Pta4QVs7nNkrFpDVHr1keAJKuWXPQ+mL1RLp9BH1oYkI4187WG6BRMWMPw1yqRVra3iCx6nEho9HLYkWm4tiP88gv5ywtGpljgwGKV4c05LCxeePWiII2xhDjoOEgdnMFSBtUW9VQlNWT29esIIPJQXvDTHu6+cWcjsm5IpqUkhhUf1Jd/zpDjfqCEixKTKTD1SnX7e8XN0uRgsmQHzbM5R+EWNV9ukCYz8O4LNwrvUKW5MQW/AnPo3OLpd9CUcQNh7z+dlof7/Y16ymEQrh6Ch4wPRbEMRRzNXvO//F2+JuWXjPzyHtg+Uo+6FYbduhp8IOSdlOGo1oCHEBvBYRiOCfHFXBvM+NlgljlJkj4iqx03UVmGt2h5nnjzc47UOaYtFyzsNQ3wOtm3MTi7B7ny1IxM6+fcpo=
+    properties :
+     x : 204
+     y : 352
+     width : 48
+     height : 48
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         SI OuiNon("Voulez vous vraiment abandonner la gravure en cours ?") ALORS
+         	// appeler la méthode d'annulation de la gravure de IMAPI
+         	GraveurAnnuleGravure()	
+         	moimeme..etat=grise
+         	ferme("",faux)
+         FIN
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Graver
+    identifier : 0x241e663f074f3902
+    internal_properties : CAAAAAgAAAD5KFyWX8UAj4ZyPJDwsmMKkSQL5aMf5RMXcdNc7szOEVkNLnkvUoRGwbvf5F60mQDHQBcqbyBrllKgKaVgpdwpIQItBxVphxFJaIKthVY4xvWDAjUM+gJANqJEi9J/TbGTldxdsQ797yRNjRDUoMHtypQQrKbGLibSAh70oRoLH43KPuqKpXEiIDJok8SEyynJSnGIHazAdukA6yWJ8mFXV8IukRiCcPRTnOKLKnos9GLIrxkPVif9wN6B/2dSwSfCTIl0HZ3EpVC3ODjm020tErrEOvtaUg4f3TWGw9iOvrBCDuw45hwDr630I+mt5N160Tenk5qckFsLbL8MT1EsPtW/9diJbN/IH4DJoj5oYeOdu7IkRst40uir6rMwWZ2CE6qH2ZILI900DtAZM9hZZe/JLbx6kimrXxPfiZaKPAPNiNSG8XThGlGwDY1hsbaABoarlj7+Wb48F7LmXF7GHP8TCvoat8ti7K+2bDwfkKkYnlPL3Fy9z3lQDpclJb/RZZlpcpvZomx4v7ewGFhulzhzVglHG20QCYsUr7ZiFAGVmFfdmQa5KN2kRbqQBBoDC6QBW53rX1Ta6pgych87Lo//hVB9rIL7Ydy/WOL8i7+C5kmqxZM8QKE+dLFiFY065OHVPwmnxsuwWKC4UBk2o+olqH2LwRJewKrJBGldKLDMKZC6bORjdWcgISMtZ0md3GmLc5YGtrKjy34oEr8nb6uzcHgYdYV9SFhUHgRT5epPurwQ8KZ8IMd3Yze11RlWp3hJ9UAuaFGulcD8sJLgh/ow+xBEiPMUVpYwdPt2xnGZfHs=
+    properties :
+     x : 138
+     y : 350
+     width : 48
+     height : 48
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAADPqSmxk3lpApVWcxxQO04fVUfW4H4rT1f1lA/yvKEJSVeikCR1rh3dNvUTGqCO8yTFCDhYZt5Pgwcurc6nOdWt5FhRvBiRgcPpy791hYO/09JIkZDRFMvamQlqZW6aKpk4wDTC7TOl708SM2g=
+        code : |1-
+         nGbParametre1 est un entier
+         
+         //Démarre la gravure
+         si INT_Eject = 1 alors
+         	nGbParametre1 = graveurEjecteAuto
+         sinon
+         	nGbParametre1 = graveurSansEjecter
+         FIN
+         
+         si pas GraveurEnregistre(nGbParametre1,GravureProgression) alors
+         	erreur("Echec de la gravure."+rc+ErreurInfo())
+         	ferme("",faux)
+         FIN	
+         
+         MoiMême..etat = grisé
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : INT_Eject
+    identifier : 0x241e66680773dc57
+    internal_properties : CAAAAAgAAAAdDoErBegTKv12lWvVbyrHmepOeZM6q9HgBaLa+6lEVHBpfVRE0Sa+7HypRlkQwx6VCmmtDVzMvez0gk58iTtMq39LiluUkylSQgzDy2ook3Yl6fpoRstgFJhao7ug5l25GCY4J6N3L+zMluoH5xDS3+zem2UOmoWJ8eS2WdGbgbUnlXmbw2REvcdlwdkC86+X4ifRZKXn1jngDuZ9f6dUCXaeyIFZrhvgDwCjyrOo8qLKzHtaEKnuBCKsf83Nf7LTbXPDMYgiYB/i2Th+BHj0n4TBUxEkf/lxHrP0qHO6ncZ0zYxHyaIVqHpiqHxU8GjyHH/HG1KFlGqJryPPtFsNtEgG7EsY/Iw1B8092CSAINcNyviqPInqwVBDwHzolJvAlXbk7KS5jXHiiedp83TJmNwpze8KMDwULABD5q01gxGhsaXXmWOB5ovqdVBKIJ4YscLg/YYljJro0StiCfzw+pNMeJCcWYlgwgcD0DxAQN9wgEaaMwLcx30SaBrVW+L9MYQUHrtkVsXE9gRvN1taniM9gcvrUe23lkScnBmOsYTf0ZvfzskTj07PPEKf+TE6bvomn7Q46T9dSTQvjiAEZotrBHRrU23D/PXcAfPfdTh0AW2hRpamo8cjKTD7qu4Hkxsg//ZSYZQUDhlGl1HvN5MWgBujLkQOi2Ux/XwI8WvNkkBYvWYyRejeYs1r7kK4k3UOf00EVMbfdwAut8EtFtoQWuaL5qA7pQKrrLrZlGxktcTqpJ1/gWnAILW9nOy/c6LBpO+V8RmIN82OKQ==
+    properties :
+     x : 100
+     y : 44
+     width : 250
+     height : 26
+    options :
+     -
+       internal_properties : CAAAAAgAAABMk8nHJWgiPaM2ex1WdNOjifpB0F3cOTmhYhejnu9qfidYkn/grO0GfDdy4PfpZIoqcX+ZTrhIemSDgOvmc3DMuyic0QDdNbm+28zaDRM7PO9lD/CDB2bJZxnTib3kguzoMt//X5cPjN1YDybq4CXjoefussEWkfaA3jFVS6EWwM2DaF75eMrKAk2OiPHb1AfH2IIVcUII1YRYg7YOQzsj0c4EJz16Clp0L2yzPRc4Hn7K6oc9OAVH8Djikzc=
+    type : 5
+    controls : []
+    code_elements :
+     type_code : 5
+     p_codes :
+      -
+        code : |1+
+         moimeme = 1
+        type : 14
+  -
+    name : JAUGE_BLOCS
+    identifier : 0x241e73120f0d52b1
+    internal_properties : CAAAAAgAAADe/jb2hSXtcSjo6JL+mkEDN8TLn1WFZ7FAGabc7PZuGMzGvfNtK6ixyyL2/L6cET0iVQxVijHTc3PXLgqaTi4FNgJpPHAaEyIC46V5ixD5I+lAXQvYtQRUYatfMgJpWDr6fvPsHnkdBoTvEFhhzFj2OgPyiT3bdd4cXknYq8+iPL0nLe/ZGV525KykrRPPTOcbYnCVWxl/j1VbiIbg0MSGbiFuvlUjqIZG9QxydAwFSXcXF2QLjOK3vw5ecBbC0lRVIWEVuv0z0whrmh4Swid2pXsz9dHoT1Dz+ygenvERu3ZCGA9vlGdP5WxakaTpIx1Qy/4/WFlFijYN2npghnUMASflqWM+w5If9Y8FOCn7m+WqSfnQxSaDhAjuNbMnGNisy4AyD3+OEbfvy+TWuclS0R4a0tuPE1FzfH1ZTzmdebFVa+IFza14cARcKajJH8UWIk90i6myQouQ40vSYZGS8Y5nUA98XnO4l37Ez70TjB2FcE6952whakMHtujr8X/GkEuyfDkUoA7g/DTvh9Dq40JUGtcmhVxdnCwRnA5CZ9Zd2I+zNrwUWfdXeXSn2xm5P/r5uuUSgPGowl86vsDUGekyqMLoUSkyM9z2hqtrP7ynsGGQppOkauYvnsk+6Ht3mdlfgQElyzXBEvI0VyxRPZ/Rg/jhooznnfWl2KW3lNT/4L74ROuUKXBpiSof8nb4vuhtBcP0dlfi5ndhahomtT36I1gln9mmzxxAw4HYP3MyYUJjWwQlaG5pRsM4dOPSuSHISksj/MNDFv9sfnWKmzAQWg5ysHo0JER1aJvuUYCvl1x4gsU=
+    properties :
+     x : 33
+     y : 249
+     width : 324
+     height : 30
+    type : 10
+    code_elements :
+     type_code : 17
+     p_codes : []
+  -
+    name : JAUGE_PISTES
+    identifier : 0x241e73120f0f52c1
+    internal_properties : CAAAAAgAAAA/AnSopdShn5dfU9yQOiUHyhqBBsQSUZlN8JHI0NA/2yIzTVzUTReneC7g7cMnSbrXpAQJIKULtULMdqxk7uPiwc0kmLSN3HvsxkUlwXZ9aAYuQv8cKAzI3Hx7W2gXLwbj007Re8KtgAj4bqnCFzuaAdbvjWzLprPfZsN5QojlbKwLUhrvY22XuOykJcsv8Zj1h+H79fXGRlgmba+3IMrV/zMCY6ZJ/aC5dx7rKfOk2DoMoM+/3ZIPX4OI37+rh5avbi5Ssx2Ac6kO4IN3RzIOSlWiXWC3iQ13kX9eSUojB1oP6H7InxqhNHWf7y5+jKGDSDesuKcMEX0GSERuoJdW1bsDiqlmMA5Mb+F61qODEh62MNmCVE/xHSeEgRST5gfp3jxyutrtbTVPLp7Tk4KVfEq8ge7vmD9Ag1gr27pxeyCiHElAM0Y2fSOXUQawHyNFK1QdiAcdNoxpoDscUr1a6uU6Cw5C86O1fnlm4waxqLzuxY3wVflLYXDoZPhocfEPuQgBfyUT3HuT2+rbAKj+auUzo5wASo5whaF7JJHErRFG1WKCCHEAiIwYjR7yJcW6TKM+680X2lxJh63mPb4WqhL3yeeY/v8FKpcMMmLpsZ1A9TxvbFD0OTFOGD0Vjut+ThomHI/AX2y0YXBMlKpxgiJwiIllWQJw5GCXpBjnLbrjDvziCwzmDpHLXm0lzLoBP5YVe+bHQliFBNch029PZNMqB0I74wanzPaZ8EX6dYg1TmXkRWJGApqJtO5l3PPNPmHQC5nxmIz80PRxj21izZyEZgMxcKJw5aKX2At0/d1tBGP7FM5VDw==
+    properties :
+     x : 33
+     y : 285
+     width : 324
+     height : 30
+    type : 10
+    code_elements :
+     type_code : 17
+     p_codes : []
+  -
+    name : LIB_Libellé1
+    identifier : 0x241e9034116c2231
+    internal_properties : CAAAAAgAAAD0RpM4C4A5HtGW2xmcvpXMaS0cam70xqKaUCUXpkwDyDBGWFK//tYMvvxjipYu1D/aBmsw7mVea72YI4r/wY4u4F1iIo1og5+xbKbKYm95AOAqElZGqrfElitXdKHvGvrqaclrkSDEobe6gyP9neWLuwYiDAyF04Gi2cVpsf4m05QfT7Tqgkl4PlB7YXGFDclTTe+hB2YUhPbcrEHD3mcGq9lZrZon1+w3D/RThJOmkb4r4MvYdYLJzWIYaB+LV9u97oCl8QgG/XZ+vW7vett0oazk5cWevVP0/HSC7Ls71mYWq/PYumjkjFtkja6hxlJ3nd14AgunyF2P9RqIHYYeBXfObQFBHYRKHotCsmcPxSYX3Hp9VK3cgxDYRGjOgr0EiWxh0Q==
+    properties :
+     x : 94
+     y : 6
+     width : 263
+     height : 93
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : LISTE_InfoGravure
+    identifier : 0x2422e0c809c3f305
+    internal_properties : CAAAAAgAAABrDkw0ElBGqj7M6Q6sOi9TL4ttTgpr8wOBa6GgWHkkmcT21goZlDKFpYKXVqBBWDMulH3IVsxcH8o8bl/tntutC9uT6d3+U/PrzmJKZLEpCCidkffmKmdy42gCadXOP5eNy7ofB4MtvNUvMQLjybBfnb7uVtoFo+nRadw1TVswhImWVNzVx6xNxzmTFr9TGmxfcyVh1UKsyPrLHUDM9LeXcJbONrUNOdBFsxOZdf1aEm1xzdAGPW8x6f0pZFlmSUGfSxkONirOOphJrPPZp91QZEw+750ogBXSJ0EC9GmjbPTY6Bw2OHu23IjK9zTsEPA+jj89aC+iSZJLq5OyN/2Dk5vLr0Jnx28CHYzgeKQQzhiO0nunfTb9T5tsNp585BnEoEClspTch4FJoyg3+C0Q5DkSs1xJ+XG8wSDBBLKKqZwVdJ/V71/tjilzDEwmOSu1fXR2sOFxIn+Wai+J0nMNowNxnwH30sEgDpgpbRTdtGmB98TNgdlVIYt61LhTl6gMYTBnpRjbcO1CW0m3Jt3qwKXSy+XNK68AFeK91d4wR67zPEW1ggrR8Fx0I7PGBQLzaTzKtavg8Dp2Mbs9Y6fhbKqNMH8pcrsgQKiztTOU7arwVAu+A0H5yv/ek1Tl6qVJ+LJ/aXR8+K62nrlTSgAqkcDlU6wgCz/j+hu1xlAqCrmBXKgY85DB/tqVfNQmr4JfRwY7LnD8h97dAvUQekR+PZGiNA8f/Wuhq3mMhl+ZImBwB9deCltkme26jUWQQJ1LcKb6Sg==
+    properties :
+     x : 33
+     y : 107
+     width : 324
+     height : 107
+    type : 7
+    code_elements :
+     type_code : 7
+     p_codes :
+      -
+        type : 35
+        enabled : false
+      -
+        type : 22
+        enabled : false
+      -
+        type : 24
+        enabled : false
+      -
+        type : 23
+        enabled : false
+      -
+        type : 25
+        enabled : false
+      -
+        code : |1+
+         // affichage des informations complémentaire
+         si ListeSelect(LISTE_InfoGravure) <> -1 alors LISTE_InfoGravure..bulle = LISTE_InfoGravure[ListeSelect(LISTE_InfoGravure)]
+        type : 33
+  -
+    name : IMG_info
+    identifier : 0x2422e0fb09d3b9cf
+    internal_properties : CAAAAAgAAAC+4hd95ipt+SQiWTnMXdiFHfElkzsPCzBZYSCn3Pyet4QSUTaPXW+MKISpHWHNGc6j5kv2JBxm8n2h/QD/7521jryEY8Iy6njMI87eqGPJkqER49bDHglwTyx8tkmyCEr0ZJUPiKKFnKmRVVO5vqUgolOBbXC19+O309txJZ7Gx6P7l50nTkM+D3ycurcD2ZtuxUshL8ufPYg/CsViKyB3vVkkzBo0N/F6nZyL9uOsrY1ba4l8dTdccrxtSnP5mFXJt99WbJJtutN0LDaSZRRIT3KijZ12S+FhCVawClvzmbme+fQcVnW2mjBkgh7PByHEb3yQAXWHISwiuZsizcqk0BRDs1GQgiW6ono/OrkZ/L8x5IUa+tmN/gaf98PlFZsUEnvMPDPK4WXQhIKW40duV88VACn1amm0qRlVltaLYI09Qtz7vdtt8lPl+thW81aNbHDQwWBcaxNEduaW4nPyn6gwTwkyQRSuzql7OhUkyge8KszkQIHnL7hNJOj62hFACFQmqvGcd+vEN+E2jvIsa2QGbfuzDB1a9VM6Fhc6afipJqBaqpAwjDfhf7RRmao=
+    properties :
+     x : 332
+     y : -61
+     width : 16
+     height : 16
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : IMG_erreur
+    identifier : 0x2422e1230bd355b2
+    internal_properties : CAAAAAgAAAACY0LJlcLCyeWKIKMjRJ/ydNqRL4XqEVm69QKYfz2fY/hOBYz/LNQ4wQltesYsRaF2nL8RigqibSArilrbu13C3/PXdLVgSOHRw/9Canps3jZJ6eJAq0eXLCUopV1Omr2PK61j4xrY0HRCIEKA1CAscSm3U4VqSftb1ve+D4eWI7dikDjDGZv9g1xYjH4zfsZ0bnj3bWjI6LyPtCkMXWzHJYxK0CaggLSVs8RahE66vkrNfOkkpWoMpib/v5MN5w0CEJqC96xa5iag4IhDlmYvqgynzTzrC20Sipub0M5ttfsa6SbAmIuH1Pb5GYtniPOYc06ZHmYMIFK3g/0l9ZRVY0Rykvv91ATlSXXgsriPJj/t6aTwmulzoh+A6xWmvDix8DWpkQhGNlT9L2dF9+pdFtKNTIf4pNLQNqKICnVO2mtHthhaKwvASxrxx84jk3t1bmUFOyM717EtUGxq4+LJQJYtPPZi4j9BIWLyT0UP4fvmHXFTZpCmZM7gatt0XOPUStwyKXeIM85b2SMGi+BdPAPthLnufE/OW0sfUTNahgUGOsehOTl9xfJxmJE2
+    properties :
+     x : 368
+     y : -63
+     width : 16
+     height : 16
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : IMG_Attention
+    identifier : 0x242ac8d401b7e51b
+    internal_properties : CAAAAAgAAACr4xm/SY8lGAEzQzx69eHaIx06D6cSMgLS3nt7cRmVuXQ1JwowhaygvDJVL/qmhY4D2aAf8lX7u0YMHNo9lc9za3nAS/IafE7ITBVCA07N4q4q1k1HjRM+lslZzFAC3uHN1D3CAl6Nrj+fongzeQoKXZAcpP1dn6Kj2MBaTBHaBewIAg6jY4YAxgxZcosgWbeAqq/9a8ZhvxifHCQj47VwYDNpUW8ah11z++q1+Ee4BgQtcd9eMfZNjH4+sZMUiq+E6zVvrM9tnfQta5fluFbvznqjdBd32AspnuL1m1NBR/7DnuoqaICbnCqcpxdCDRslYUBdVKdk0jwgi69ew23174HCouc2IKvPY3Ji60WAO9XckI3/VchBmweF8mu7JF8llKgAZKGR4QrguIN8TcbCFkRsIvDDv7oYiO8zfYjaVQq/usfHntt1O+2MLrUdDfQhB+MvdyU6sn/MWq1cIwmlDc14LXcYH+Dgzo7yoIGsDHxi0UpXLE9bPWu8PHKyZzBlHZ7sX5Sgk15ad9TSPwLU5kbMBP41nR5SBFMOWJ+NcmZkrY7QV0Bk90UMyJtoATqs/UkgBA==
+    properties :
+     x : 297
+     y : -63
+     width : 16
+     height : 16
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : IMG_Image5
+    identifier : 0x2431343e19206729
+    internal_properties : CAAAAAgAAACQ8b8v2Voq6WEu0pBlSrzqb5ASiqsjWlSRL0rZTtI5zJcV7RSEzD6GaQIvORbhF8K3yK6buhgB9pPxDb07B6uBismIm9qCwxATbUcDR1dTf81uiFszqJLqJnVT3FUywztutV7Wq7ppsmvxrnv/LCoj6byke8I5uQT/aCFKvrxwdXUIxf2Iy0yD1KfUgIV3w/ObHZp9ceupRWibg8aUZp3RduoPGPrN/apl/JjeVXOXphFT7vG+00gMRi3JSt9GIPj/S7BGClNtSqCDXk2i6/E1U5Zr/0GbB9dfeR5U1TtoFW4OZTqp6DeamThDjwTuH7RjaDsOo/g+n+m+DPazpCdeZgfKkh0YtKNGHjQJG/AVZPtNTTjmQftOyaiZbks2NPq6tLBhbf7r1ACS/V2+5CEdskcYFeRj9I2zkB68bnhVSbiuhN7wH+1pLzBiobNqgnx7tyEHtMEFXhr2qdJ7xA0Qh5HCR7nPfQkd1Ctmij391Rd17j+n+VGgFj/LcbcCjGSEy90xKesCLQeVDqRXire5jNsjdES3n56LFwGhpuKprini/wLG3q4oGof4CgOk
+    properties :
+     y : 334
+     width : 397
+     height : 72
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : IMG_Image1
+    identifier : 0x243139283c7b9b4c
+    internal_properties : CAAAAAgAAAAf3mOlDCIh8sIG2n6GWS2+NLSQLtYd7f6ZJltEssvEn5D9duPg0oH1R9CvGZiELGSgIR6MkxpMv0F0LPR4E97V+xvsqCvnfy2YK6VadpLKqHNrhqtlA0oJ1t73cRIaDRF2EcqsFUEBExsM+vqhR/bkLRZl11qxY09+AK2+CW2hQQ3WxjH54FBJIMtS/uMOSvTcLI/sQFOWdZnwDmTqQ3wPrC0DUsC5EqtS+RlmHwToewcOPjqCuWAbnGpptBzJ4mWpR01bOZok9upQcGyWfpZ/fPieZVTPHFAfpvdt6yd2YBpTnuRReCvJ/N1D2T8A6TSRJzW5agRm6tN5Bo8dWRbXcX9fxJ8KENk5+NaY+sam0TC+eeFo8FiLj+HY+rYSB+9yG75rqYNjVIJHa3lN95TxUpIs3oKxGdmNHtefeEL7+3/LrsFMAQBJWhOykBs3Ew+oXllpGnllIua3xTqBVDBmLXbjtYAyPde7/nvtMHimaFgTWj4Qo95zVFQohrOfjzNJWQeiDS5aFc+4G9I5lXS4pEcdcOt2UaGZZhH+s+ALIEtd33NGlrYyDB62kOywEHlgfbZSJdqOXeerfcWEn3obPDczqgWpSd14JJWdf2PSrnUkTPVow64VeIk28JQpVuxnYYdD3vk=
+    properties :
+     x : 6
+     y : 16
+     width : 80
+     height : 80
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : LIB_Libellé2
+    identifier : 0x24313c9e4b21205b
+    internal_properties : CAAAAAgAAAAOrDY5fygu+uLPvgrYXPPDiOUKBAvxcRUgL1X8jC66h3yEkwjN7BVAR05UfrQmjnTrY1gZqB4nuBC0MaOMEoKAgltl3/PLBJwXYXZlwfyTKdSMWeuGffrig0Pq+56LyBqRPzMj2OVSvwyg80OITSi2m4zs636WbUAqWFY+LQDVxOyjoKKo9RKXAlhhj6WdVQy2etN4D0FoaO0lUDqNIcZE6KV/JeEVImt7bMfrX20+ET2W92I8D6DxvpArwHBLMsH6eggVP6Gy+aKpbZhxfceTrYF5FrSIFPZb9YzJ5F+l86RfLvDwqG0yoouHV7OPXvPmeAvvkwZPLT1v5g2ZOjly8FWQnuAU2pdEpvl5t6eoGQAtRiNSuuhysRxUWuLTH89fZdeGA/ANO83QeZiXbXtSeSDlmlNLcZffwGnAC6tN3SzQzy8irWErAUNrMlDiqgMC
+    properties :
+     y : 329
+     width : 395
+     height : 5
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : LIB_InfoFichier
+    identifier : 0x2431487a22e49c7d
+    internal_properties : CAAAAAgAAACoctr8qBq0c7GE9sAR4Jo9Oy+Bb6edlFMkkg1JmNtns68Xog/5G3QYmnWFSwOJy+zCPJLl8LaKTppmFg3PJ6620HuuC142hcqWFN1YGkDt1UVp+q77l2Kr+LlpUbYTvH+0lQS2APr0NO3+u0AHMroH7lJzg+KUgOgBk45PKivYU8ZfpqqDqTbjzitmwWBS66014c9iZf6FlvPudqWpl83IuxMWTVEr1Kz++LkHcoJ0Hzcvad661982jdXJnq0xzUXICXczZT93ZezjHi8NeKj7jYnNx9ahCsE2Vw6DGylKYbKo/SR9cQylJ/a7rm4lf52HhTwynlgIBxmf7NNh58KSd6d1rpFO9jC/jypkDuUf
+    properties :
+     x : 33
+     y : 220
+     width : 319
+     height : 20
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+ menu :
+  name : _Menu
+  identifier : 0x241e65cf038483ff
+  internal_properties : CAAAAAgAAADW5sfaLdGdG50Lxjqk0HpI6t3dLzPfYEzZXLMiS+AQiUdcfkfaSZK3jpuPHlTQAxgwfwTj/4CatChl8OMg51NO4o48sbHmd/RPA5yaatVljK2YChb//uQHpYRt0xmxGG57imKKnTPIVCBoL+JP4ikdF00GhcTurrZ+mhWpYczV1fZXmKc1Ubddp5MZzXm04o+N/fVJNlXmQc1m7hPfQkqqIO+342Hym8/mBboo+MCJqvEbUG1CmFlfXgHaImkA0oqTB52ypBSCSOq3SGDNj6OOsRyqTfBavQ==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAABbQyvyRSYGdwMqtgQiY0eyZHY8CJWi5kLsKzVzk/rU5dzDR6gcm6dQgvUW42CwXUaTQBc3ba8dLrmqxPAR/fNQmAkCoF1GDAZzrvmUB6CT228/CjjN6if+OifZj8fu
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      procédure FEN_Grave(gslisteFichier est une chaine, gnTypeCompile est un entier)
+      	
+      // Par défaut, on renvoie faux
+      	MaFenêtre..ValeurRenvoyée = faux
+   -
+     code : |1+
+      // selon la compile choisi on modifie le format
+      selon gnTypeCompile
+      	cas CompileAudio
+      		GraveurTypeMédia(médiaType_CDDA_CDROM)
+      	cas CompileDonnées
+      		GraveurTypeMédia(médiaType_Données)
+      	AUTRE CAS
+      		
+      FIN
+      // exécution de l'ajout des fichier à graver (cette action bloque l'application durant l'ajout des fichiers)
+      sablier(vrai)
+      // Ajout des fichiers à la gravure
+      AjouteFichierAlaGravure(gslisteFichier)
+      sablier(faux)
+     type : 34
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+     type : 40
+   -
+     code : |1-
+      si ErreurDétectée ALORS
+      	mafenêtre..valeurrenvoyée = faux
+      sinon
+      	mafenêtre..valeurrenvoyée = vrai
+      FIN
+     type : 2
+   -
+     code : |1-
+      
+     type : 11
+   -
+     code : |1-
+      
+     type : 12
+   -
+     code : |1-
+      
+     type : 17
+   -
+     code : |1-
+      
+     type : 13
+  procedures :
+   -
+     name : GravureProgression
+     internal_properties : CAAAAAgAAADSMn7Rs1oeIZRePbCBQBOv/H+CoHSuktJHMowV8vd8bcL/L6Mm1TWmyONM6loZzUjJcS4C2+uo2WLjikBO3tA+dOXmwoLQJM5tn79s4gN1GYRidy47Axi2Xm3VFGwrrK4SVHg3NgrljbEbijSQJgItAi22UvYuztaTa4atB/nuqamlHkAv/smsrMXsd26kczU3XUi1nqMk2ShphJwOiYVBSIlgnAIDpcvlVIkwcU0GpPSu34F9NhogYzfWTMVA2cJV
+     procedure_id : 1449724420742093920
+     type_code : 14
+     code : |1+
+      // Syntaxe :
+      //GravureProgression (<nIDNotification> est entier, <sMessage> est chaîne, <nParamPerso> est entier, <nParam1> est entier, <nParam2> est entier)
+      //
+      // Paramètres :
+      //	nIDNotification (entier) : Identifiant de la notification gravure
+      //	sMessage (chaîne ANSI) : Message texte complémentaire de la notification
+      //	nParamPerso (entier) : Entier passé en paramètre sur GravureEnregistre (si un entier a été indiqué)
+      //	nParam1 (entier) : Entier, dépend de la notification (donc de nIDNotification)
+      //	nParam2 (entier) : Entier, dépend de la notification (donc de nIDNotification)
+      
+      Procédure GravureProgression(nIDNotification est un entier, sMessage est une chaîne, nParamPerso est un entier, nParam1 est un entier, nParam2 est un entier)
+      
+      // Cette CallBack est générique et peut être passée en paramètre à GraveurEnregistre et GraveurEfface (Rappel : vous pouvez aussi utiliser des callbacks différentes pour chaque fonction)
+      // Les paramètres sMessage, nParam1 et nParam2 ne sont pas utilisés pour tous les évènements. Si un paramètre n'est pas utilisé, il est initialisé à "" ou 0.
+      
+      SELON  nIDNotification
+      	CAS GraveurNotificationAbandon:
+      		listeajoute(LISTE_InfoGravure,gimage(IMG_erreur)+" Abandon de la gravure")
+      		ListeSelectPlus(LISTE_InfoGravure,ListeOccurrence(LISTE_InfoGravure))
+      		
+      		// Déclenche une erreur
+      		erreurdéclenche(1,"Abandon de la gravure")
+      		
+      		Ferme(FEN_Grave)
+      		
+      	CAS GraveurNotificationErreur:
+      		// nParam1 : contient le code d'erreur utilisateur
+      		listeajoute(LISTE_InfoGravure,gimage(IMG_erreur)+" Une erreur a été détectée pendant la gravure."+nParamPerso+glien(sMessage))
+      		ListeSelectPlus(LISTE_InfoGravure,ListeOccurrence(LISTE_InfoGravure))
+      		
+      		ErreurDéclenche(1,"Une erreur a été détectée pendant la gravure."+nParamPerso+RC+sMessage)
+      		Ferme(FEN_Grave)
+      		
+      			
+      	CAS GraveurNotificationFermetureCD:
+      		// nParam1 : Durée estimée en secondes		
+      		listeajoute(LISTE_InfoGravure,gimage(IMG_info)+" Fermeture du disque. Temps estimé = " + nParam1 + " secondes. ")
+      		ListeSelectPlus(LISTE_InfoGravure,ListeOccurrence(LISTE_InfoGravure))
+      		
+      	
+      	CAS GraveurNotificationFinEffacement:
+      		// nParam1 : Etat du graveur. 0 si aucune erreur.
+      		si nParam1 <> 0 ALORS
+      			
+      			ErreurDéclenche(1,ChaîneConstruit("Effacement du disque terminé anormalement (%1) : %2",nParam1,sMessage))
+      
+      			listeajoute(LISTE_InfoGravure,gimage(IMG_erreur)+ChaîneConstruit(" Effacement du disque terminé anormalement (%1) : %2",nParam1,sMessage))
+      			ListeSelectPlus(LISTE_InfoGravure,ListeOccurrence(LISTE_InfoGravure))
+      
+      		FIN
+      		
+      		ferme(FEN_Grave)
+      	
+      	CAS GraveurNotificationFinGravure:
+      		// nParam1 : Etat du graveur. 0 si aucune erreur.
+      		si nParam1 = 0 alors	
+      			
+      			listeajoute(LISTE_InfoGravure,gimage(IMG_info)+" Notification de fin de Gravure")	
+      			ListeSelectPlus(LISTE_InfoGravure,ListeOccurrence(LISTE_InfoGravure))	
+      			
+      			BTN_Graver..etat =actif
+      			
+      			// Initialisation des jauges
+      			FEN_Grave.JAUGE_BLOCS			= nParam1
+      			FEN_Grave.JAUGE_BLOCS..Libellé 	= "Bloc n° : "+nParam1+" /"+nParam2
+      			FEN_Grave.JAUGE_PISTES			= nParam1
+      			FEN_Grave.JAUGE_PISTES..Libellé = "Piste n° : "+nParam1+" /"+nParam2
+      
+      			
+      
+      		sinon
+      			listeajoute(LISTE_InfoGravure,gimage(IMG_erreur)+ChaîneConstruit(" Gravure du disque terminé anormalement (%1) : %2",nParam1,sMessage))
+      			ListeSelectPlus(LISTE_InfoGravure,ListeOccurrence(LISTE_InfoGravure))
+      			
+      			ErreurDéclenche(1,ChaîneConstruit("Gravure du disque terminé anormalement (%1) : %2",nParam1,sMessage))
+      			
+      		fin
+      		
+      		Ferme(FEN_Grave)
+      		
+      	CAS GraveurNotificationGravureBloc:
+      		// nParam1 : Bloc actuel
+      		// nParam2 : Nombre total de blocs
+      		si FEN_Grave.JAUGE_BLOCS..BorneMax<>nParam2 alors FEN_Grave.JAUGE_BLOCS..BorneMax=nParam2
+      		// Remplissage jauge et affichage du bloc en cours
+      		FEN_Grave.JAUGE_BLOCS			= nParam1
+      		FEN_Grave.JAUGE_BLOCS..Libellé 	= "Bloc n° : "+nParam1+" /"+nParam2
+      		si pas FEN_Grave.JAUGE_BLOCS..visible=vrai alors FEN_Grave.JAUGE_BLOCS..visible=vrai
+      		
+      		
+      	CAS GraveurNotificationGravurePiste: // lors de la gravure d'un CD Audio
+      		// nParam1 : Piste actuelle
+      		// nParam2 : Nombre total de Piste
+      		si FEN_Grave.JAUGE_PISTES..BorneMax <> nParam2 alors 
+      			FEN_Grave.JAUGE_PISTES..BorneMax = nParam2
+      		FIN
+      		
+      		// Remplissage jauge et affichage de la piste en cours
+      		FEN_Grave.JAUGE_PISTES			= nParam1
+      		FEN_Grave.JAUGE_PISTES..Libellé = "Piste n° : "+nParam1+" /"+nParam2
+      		
+      		si pas FEN_Grave.JAUGE_PISTES..visible=vrai alors 
+      			FEN_Grave.JAUGE_PISTES..visible=vrai
+      		FIN	
+      		
+      	CAS GraveurNotificationPrepareGravure:
+      		// nParam1 : Durée estimée en secondes	
+      		listeajoute(LISTE_InfoGravure,gimage(IMG_info)+" Préparation de la gravure. Temps estimé = " + nParam1 + " secondes.")
+      		ListeSelectPlus(LISTE_InfoGravure,ListeOccurrence(LISTE_InfoGravure))
+      				
+      	AUTRE CAS:
+      		//au cas où...
+      		listeajoute(LISTE_InfoGravure,gimage(IMG_Attention)+" Statut inconnu = " + nIDNotification + "  (" + nParam1 +" / " + nParam2 + ")"+rc+ sMessage)	
+      		
+      FIN
+     type : 458752
+   -
+     name : AjouteFichierAlaGravure
+     procedure_id : 1450962904623458191
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //AjouteFichierAlaGravure (<sPListeDesFichiers>)
+      //
+      // Paramètres :
+      //	sPListeDesFichiers : liste des fichiers à ajouter. le format attendu est : <NomEtCheminDuFichier1>;<CheminSurLeCD>RC<NomEtCheminDuFichier2>;<CheminSurLeCD>
+      // Valeur de retour :
+      // 	Aucune
+      //
+      Procédure AjouteFichierAlaGravure(sPListeDesFichiers)
+      
+      sfic 			est une chaine			// Variable de boucle
+      sCheminFic 		est une chaine			// Nom et chemin d'accès au fichier
+      sCheminSurCDDVD est une chaine			// Nom et Chemin d'accès sur le CD/DVD
+      nSnbFic 		est un entier			// Compteur du Nombre de fichier Ajouté
+      
+      // Rend visible le libelle d'information
+      LIB_InfoFichier..Visible = vrai
+      // Affichage de l'information
+      ListeAjoute(LISTE_InfoGravure,gImage(IMG_info)+" "+HeureVersChaîne(HeureSys(),"HH:MM:SS")+" Préparation des fichiers à la gravure")
+      // On rend la main au système
+      Multitâche(-1)
+      // grise le bouton graver tant que tous les fichiers non pas été ajouté
+      BTN_Graver..etat = Grisé
+      POUR TOUTE CHAINE sfic DE sPListeDesFichiers SEPAREE PAR rc
+      	// Chemin du fichier à graver
+      	sCheminFic 		= ExtraitChaîne(sfic,1,";")
+      	// Chemin sur le CD/DVD
+      	sCheminSurCDDVD 	= ExtraitChaîne(sfic,2,";")
+      	// Ajout à la liste des fichiers à graver
+      	si pas GraveurAjouteFichier(sCheminFic,sCheminSurCDDVD) ALORS
+      		Multitâche()
+      		si sansespace(sCheminFic) <>"" alors
+      			ListeAjoute(LISTE_InfoGravure,gImage(IMG_erreur)+" "+HeureVersChaîne(HeureSys(),"HH:MM:SS")+" Le fichier "+sCheminFic+" n'a pas été ajouté"+glien(erreurinfo(errMessage)))
+      			ListeSelectplus(LISTE_InfoGravure,ListeOccurrence(LISTE_InfoGravure))
+      		FIN
+      	sinon
+      		// comptage des fichiers ajouter
+      		nSnbFic ++
+      		LIB_InfoFichier = "Ajout du fichier : "+fExtraitChemin(sCheminFic,fFichier+fExtension)
+      	FIN
+      FIN
+      // Affichage de l'information
+      ListeAjoute(LISTE_InfoGravure,gImage(IMG_info)+" "+HeureVersChaîne(HeureSys(),"HH:MM:SS")+" Fin de la préparation")
+      ListeAjoute(LISTE_InfoGravure,gImage(IMG_info)+" "+HeureVersChaîne(HeureSys(),"HH:MM:SS")+" "+nSnbFic+" fichiers ont été ajoutés")
+      ListeSelectplus(LISTE_InfoGravure,ListeOccurrence(LISTE_InfoGravure))
+      // Rend Invisible le libelle d'information
+      LIB_InfoFichier..Visible = faux
+      // Rend le bouton graver accessible
+      BTN_Graver..etat = Actif
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x141e65bb00513582
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

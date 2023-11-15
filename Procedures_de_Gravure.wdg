@@ -1,0 +1,246 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : Procedures_de_Gravure
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x1ef49a7d02a4a457
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes : []
+  procedures :
+   -
+     name : GraverLes_fichiers
+     internal_properties : CAAAAAgAAAC3JOXJhr+/FwcNrouB/B09vKUVLEGI5B0IepRJ+9gzL4rHoCP7hx0bS199ulVzul4d6jOO6WhzduI2g8/hIhRbUcyeScAM1poegRnOlzb6sOGnCm9wAHQlNw91Q+Sed6TJbRwidaYgPQwqfgEUByOseDa4UWUoZoZiHSk4mZmei68K0n7tKqeQF1M5KmmRZI3LtPf/dOoRfYi9NosbcpPjRuVfXn8PPx/Kh7ldUk7G/F3yBU4iewGNDINV1ZpWjWjtn7OCPwqtfizgm2pxuN+wpVbvrleLfxCKOwYFEhA8KqBMrsPXGh8gMX72
+     procedure_id : 2230577577161237591
+     type_code : 15
+     code : |1+
+      // Résumé : Cette procédure vérifie l'état du graveur et du disque. Différent controle sont effectué
+      // 		- Disponibilité du graveur
+      //		- présence ou non d'un Disque
+      //		- taille suffisante disponible sur le disque
+      //		- ajoute les fichiers dans la liste à graver
+      // Syntaxe :
+      //[ <Résultat> = ] GraverLes_fichiers (<sPListeDesFichiers> est chaîne, <TypeDeCDDVD> est entier [, <pNomCDDVD> est chaîne])
+      //
+      // Paramètres :
+      //	sPListeDesFichiers (chaîne) : Chaine contenant la liste des fichiers à graver : <Chemin Fichier1>;<Chemin sur le CD/DVD>RC<Chemin Fichier1>;<Chemin sur le CD/DVD>RC
+      //	TypeDeCDDVD (entier) : CD de Données : CompileDonnees ou CD Audio : CompileAudio
+      //	pNomCDDVD (chaîne - valeur par défaut="Compile1") : Donner le nom du CD/DVD
+      // Valeur de retour :
+      // 	booléen :  <indiquez ici les valeurs possibles ainsi que leur interprétation>
+      //
+      // Exemple :
+      //  Cette procédure globale s'utilise avec les fenêtres
+      // 		- FEN_Grave
+      //		- FEN_Efface.
+      // 	
+      //
+      Procédure GraverLes_fichiers(sPListeDesFichiers est une chaine,TypeDeCDDVD est un entier, pNomCDDVD est une chaine = "Compile1")
+      
+      // Calcul de la Place que vont prendre les fichiers
+      
+      //extraction des fichiers de la chaine
+      sfic 			est une chaine
+      sCheminFic   	est une chaine
+      rTailleFichiers est un numérique // Taille en Octet
+      
+      
+      //GraveurEtat : Etat du graveur
+      si GraveurEtat()<>GraveurInactif ALORS
+      	Erreur("Le graveur n'est pas disponible.")
+      	renvoyer Faux
+      FIN
+      
+      // Calcul de la taille des fichiers à graver
+      POUR TOUTE CHAINE sfic DE sPListeDesFichiers SEPAREE PAR rc
+      	si sfic <> "" ALORS
+      		sCheminFic 		= ExtraitChaîne(sfic,1,";")
+      		// Taille Total à gravé
+      		rTailleFichiers += fTaille(sCheminFic)
+      	FIN
+      FIN
+      
+      //CD/DVD prêt dans le lecteur ?
+      nFormatCDDVD est un entier
+      rTailleDispo est un numérique
+      boucle
+      	nFormatCDDVD=graveurInfoMedia(MédiaFormat)
+      	si (nFormatCDDVD=0 _ou_ ETBinaire(nFormatCDDVD,MédiaFormat_Inutilisable)) ALORS
+      		//Pb CD/DVD, éjection
+      		GraveurEjecte()		
+      		//1 : Re-essayer (changez ou nettoyez le CD/DVD)
+      		//2 : Annuler la gravure
+      		//1 : Re-essayer (changez ou nettoyez le CD/DVD)
+      		//2 : Annuler la gravure
+      		si Dialogue(<§?141FCCF701722E6C§>)=2 alors
+      			renvoyer faux		
+      		FIN
+      	sinon
+      		//CD/DVD OK
+      		//assez de place ?
+      		
+      		//Taille en bloc, 1 1 bloc = 2048 octets donc pour avoir la taille libre en Mo il faut divisé par 2048/1024/1024, soit divisé par 512
+      		rTailleDispo=graveurInfoMedia(MédiaTailleLibre)*2048 //512
+      		si rTailleDispo<rTailleFichiers alors
+      			//pas assez de place sur la CD/DVD
+      			//CD/DVD/BD RW ?
+      			si ETBinaire(nFormatCDDVD,MédiaFormat_RW) _ou_ ETBinaire(nFormatCDDVD,médiaFormat_DVDmoinsRW) _OU_ ETBinaire(nFormatCDDVD,médiaFormat_DVDplusRW) _OU_ ETBinaire(nFormatCDDVD,médiaFormat_DVDplusRW_DL) _OU_ ETBinaire(nFormatCDDVD,médiaFormat_BD_RE) ALORS
+      				//Cd/DVD RW				
+      				//1 : Effacer le CD/DVD RW avant la gravure
+      				//2 : Re-essayer (Changer le CD/DVD dans ce cas)
+      				//3 : Annuler la gravure				
+      				SELON Dialogue(<§?141FCD5C01AAB9EE§>, NumériqueVersChaine(rTailleFichiers, ",2fS") ,NumériqueVersChaine(rTailleDispo , ",2fS"))
+      				//1 : Effacer le CD/DVD-RW
+      				//2 : Re-essayer (changer le CD/DVD)
+      				//3 : Annuler la gravure
+      					CAS 1 // Effacer le CD/DVD RW avant la gravure
+      						//effacement (rapide) du CD/DVD RW, sans éjection
+      						//fenêtre bloquant de gravure car GraveurEfface n'est pas bloquante
+      						si pas ouvre(FEN_Efface) ALORS 
+      							GraveurAnnuleGravure()
+      							renvoyer faux
+      						FIN
+      //						//Il serait aussi possible de lancer GravureEfface ici 
+      //						//Dans ce cas il faudrait utiliser le code suivant 
+      //						//	SI pas GraveurEfface(Faux) ALORS //Effacement rapide
+      //						//		gsMessageErreur="Echec de l'effacement du CD/DVD RW"+rc+erreurinfo()
+      //						//		//Annuler la gravure (effacement) en cours 
+      //						//		GraveurAnnuleGravure()
+      //						//		Renvoyer Faux
+      //						//	FIN
+      //						//Et pour attente de la fin de gravure le code suivant :
+      //						TantQue GraveurEtat()<>GraveurInactif						
+      //							Multitâche(-30) //négatif pour permettre l'annulation (par Echap)
+      //							si ToucheEnfoncée(teEchap) _et_ OuiNon("Annuler l'effacement en cours du CD/DVD RW ?") ALORS
+      //								//Annuler la gravure (effacement) en cours 
+      //								GraveurAnnuleGravure()
+      //								Renvoyer Faux
+      //							FIN
+      //						FIN	
+      						
+      					CAS 2 // Re-essayer (Changer le CD/DVD dans ce cas)
+      						//boucle
+      						
+      					CAS 3 // Annuler la gravure	
+      						GraveurAnnuleGravure()					
+      						renvoyer faux
+      				FIN
+      				
+      			sinon
+      				//Taille insuffisante et ce n'est pas un CD/DVD RW
+      				//Ejection CD/DVD
+      				GraveurEjecte()
+      				//1 : Re-essayer (Mettez un autre CD/DVD dans le lecteur)
+      				//2 : Annuler la gravure
+      				SELON Dialogue(<§?141FCE07021656F0§>,NumériqueVersChaine(rTailleFichiers, ",2fS"),NumériqueVersChaine(rTailleDispo , ",2fS") )
+      					
+      					CAS 1 // Re-essayer (Mettez un autre CD dans le lecteur)
+      						
+      						
+      					CAS 2 // Annuler la gravure
+      						GraveurAnnuleGravure()
+      						renvoyer faux
+      				FIN
+      			FIN
+      		sinon
+      			//il y a assez de place sur le CD/DVD
+      			Sortir
+      		FIN		
+      	fin
+      fin
+      
+      // Nom du CD/DVD
+      ResNom est un entier = GraveurNomVolume(pNomCDDVD)
+      // Erreur rencontrée ?
+      SI pas ResNom ALORS
+      	// Affichage de l'erreur
+      	Erreur(ErreurInfo(errMessage))
+      fin
+      	
+      
+      // Ouverture de la fenêtre de gravure
+      si ouvre(FEN_Grave,sPListeDesFichiers,TypeDeCDDVD) = faux
+      	Erreur("Une erreur est survenue pendant la gravure",erreurinfo())
+      	renvoyer faux
+      sinon
+      	renvoyer vrai
+      FIN
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_Collection1
+resources :
+ string_res :
+  identifier : 0x141d7d66001ba40b
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+ dialogs :
+  -
+    identifier : 0x141fccf701722e6c
+    internal_properties : CAAAAAgAAAB8xOgie8OjVtTQpthofhY4GYd/dZBrTftFG469e3erZ1Hl
+    label :
+     fr-FR : "Il n'y a pas de CD/DVD dans le lecteur ou il n'est pas inscriptible. \r\nQue désirez-vous faire ?"
+    image : {}
+    cancel_button : 1
+    buttons :
+     -
+       label :
+        fr-FR : Re-essayer (changez ou nettoyez le CD)
+       image : {}
+       value : 1
+     -
+       label :
+        fr-FR : Annuler la gravure
+       image : {}
+       value : 2
+  -
+    identifier : 0x141fcd5c01aab9ee
+    internal_properties : CAAAAAgAAAA8BKjiu4PjlhQgxrgo3rZ4WddvBQA7fcsFW079uzdrpxEl
+    label :
+     fr-FR : "Le CD/DVD qui se trouve dans le lecteur n'a pas assez de place pour graver votre sélection.\r\nPlace nécessaire : %1 Mo\r\nPlace libre sur le CD : %2 Mo\r\n\r\nQue désirez-vous faire ?"
+    image : {}
+    cancel_button : 2
+    buttons :
+     -
+       label :
+        fr-FR : Effacer le CD-RW
+       image : {}
+       value : 1
+     -
+       label :
+        fr-FR : Re-essayer (changer le CD)
+       image : {}
+       value : 2
+     -
+       label :
+        fr-FR : Annuler la gravure
+       image : {}
+       value : 3
+  -
+    identifier : 0x141fce07021656f0
+    internal_properties : CAAAAAgAAAB8xOgie8OjVtQABrio3ra42TePZaAbHStFG469e3erZ1Hl
+    label :
+     fr-FR : "Le CD/DVD qui se trouve dans le lecteur n'a pas assez de place pour graver votre sélection.\r\nPlace nécessaire : %1\r\nPlace libre sur le CD : %2\r\n\r\nQue désirez-vous faire ?"
+    image : {}
+    cancel_button : 1
+    buttons :
+     -
+       label :
+        fr-FR : Re-essayer (Mettre un autre CD dans le lecteur)
+       image : {}
+       value : 1
+     -
+       label :
+        fr-FR : Annuler la gravure
+       image : {}
+       value : 2
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
